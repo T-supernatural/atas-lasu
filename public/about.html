@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- title -->
+    <title>CodeRoll - About Us</title>
+
+    <!-- styling-link -->
+    <link rel="stylesheet" href="../src/output.css">
+
+    <!-- boxicon-link -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- favicon-link -->
+    <link rel="shortcut icon" href="../img/coderoll.png" type="image/x-icon">
+</head>
+
+<body class="dark:bg-gray-950 bg-gray-100 select-none">
+
+    <!-- navigation-bar -->
+    <nav
+        class="w-full h-16 shadow-md fixed flex justify-between items-center px-10 z-50 bg-gray-100  top-0 dark:bg-gray-950 max-sm:px-4">
+        <div class="flex items-center gap-2">
+            <img src="../img/coderoll.png" alt="" width="45">
+            <p class=" text-4xl font-bold dark:text-white">Code<span class="text-red-600">Roll</span></p>
+        </div>
+        <ul class="flex gap-10 text-gray-500 capitalize text-xl font-medium max-sm:hidden">
+            <li class="hover:text-black dark:hover:text-white"><a href="../index.html">home</a></li>
+            <li class="hover:text-black dark:hover:text-white"><a href="#">about us</a></li>
+            <li class="hover:text-black dark:hover:text-white"><a href="./courses.html">courses</a></li>
+            <li class="hover:text-black dark:hover:text-white"><a href="./contact.html">contact</a></li>
+        </ul>
+        <figure class="flex gap-5 max-sm:hidden">
+            <a href="#signup" class="custom-nav-button bg-red-600 text-white">sign up</a>
+            <a href="#signin" class="custom-nav-button bg-black text-white dark:bg-white dark:text-black">sign in</a>
+        </figure>
+        <a href="#phone-screen"
+            class="md:hidden text-3xl text-gray-500 hover:text-black dark:hover:text-white ">&#9776;</a>
+        <div class=" hidden target:block fixed top-0 right-0 w-[250px] h-full bg-gray-200 p-[20px] shadow-lg dark:bg-gray-950  "
+            id="phone-screen">
+            <a href="#"
+                class="text-4xl right-5 absolute top-2.5 hover:text-black dark:hover:text-white text-gray-500">&times;</a>
+            <ul class="text-gray-500 capitalize text-xl font-medium flex flex-col gap-3 mt-10">
+                <li class="hover:text-black dark:hover:text-white hover:translate-x-0.5"><a
+                        href="../index.html">home</a></li>
+                <li class="hover:text-black dark:hover:text-white hover:translate-x-0.5"><a href="#">about us</a>
+                </li>
+                <li class="hover:text-black dark:hover:text-white hover:translate-x-0.5"><a
+                        href="./courses.html">courses</a>
+                </li>
+                <li class="hover:text-black dark:hover:text-white hover:translate-x-0.5"><a
+                        href="./contact.html">contact</a>
+                </li>
+                <hr>
+                <li class="hover:text-red-500 hover:translate-x-0.5"><a href="#signup">sign up</a></li>
+                <li class="hover:text-red-500 hover:translate-x-0.5"><a href="#signin">sign in</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- main -->
+    <main class="mt-36 flex flex-col gap-40 ">
+
+        <!-- about-us -->
+        <section class="w-full h-fit px-10  flex flex-col gap-10    md:flex-row md:items-center md:px-32 md:gap-24 ">
+            <div class="flex flex-col gap-5 animate__animated animate__fadeInLeft animate__slow">
+                <h1 class="capitalize font-bold text-6xl text-red-700">about us</h1>
+                <h2 class="capitalize font-bold text-3xl dark:text-white">Code<span class="text-red-700">Roll</span>
+                    providing the best
+                    opportunities to the students around the globe.</h2>
+                <p class="text-gray-800 text-xl dark:text-gray-300">Hi, there. Welcome to CodeRoll - an ELearning
+                    platform,
+                    that focuses on teaching students everything to know about programming. It was started in 2025 and
+                    passionate towards helping students find their place in the real world.</p>
+                <a href="#signup" class="custom-button w-28 bg-red-700 text-white">join us &rightarrow;</a>
+            </div>
+            <div class="max-sm:hidden animate__animated animate__fadeInRight animate__slow animate__delay-2s ">
+                <figure class="md:w-96 md:h-96">
+                    <img src="../img/about-hi.png" alt="" class="w-full h-full object-cover">
+                </figure>
+            </div>
+        </section>
+
+        <!-- features -->
+        <section class="w-full h-fit px-10  flex flex-col gap-10    md:flex-row md:items-center md:px-32 md:gap-24 ">
+            <div class="w-[25rem] h-[25rem] relative">
+                <figure
+                    class="w-80 h-60 bg-red-300 absolute -left-3 -top-6 z-10 transform shadow-md hover:-translate-y-2 hover:z-20 transition-all outline-offset-8 rounded-lg hover:shadow-lg hover:outline-8 hover:outline-red-500">
+                    <img src="../img/course-one.jpg" alt=""
+                        class="w-full h-full object-top object-cover rounded-lg opacity-0 hover:opacity-100">
+                </figure>
+                <figure
+                    class="w-80 h-60 bg-red-600 absolute -right-7 top-12 shadow-md z-10 transform hover:-translate-y-2 hover:z-20 transition-all outline-offset-8 rounded-lg hover:shadow-lg hover:outline-8 hover:outline-red-500">
+                    <img src="../img/course-two.jpg" alt=""
+                        class="w-full h-full object-top object-cover rounded-lg opacity-0 hover:opacity-100">
+                </figure>
+                <figure
+                    class="w-80 h-60 bg-red-800 absolute left-10 bottom-10 z-10 shadow-md transform hover:-translate-y-2 hover:z-20 transition-all outline-offset-8 rounded-lg hover:shadow-lg hover:outline-8 hover:outline-red-500">
+                    <img src="../img/course-three.jpg" alt=""
+                        class="w-full h-full object-top object-cover rounded-lg opacity-0 hover:opacity-100">
+                </figure>
+            </div>
+            <div class="flex flex-col gap-5 md:w-1/2">
+                <p class="text-2xl font-semibold text-red-500">Features</p>
+                <h1 class="capitalize font-bold text-3xl dark:text-white">from beginner to pro: how Code<span
+                        class="text-red-700">Roll</span>'s structured curriculum helps you master programming concept
+                </h1>
+                <p class="text-gray-800 text-xl dark:text-gray-300">At <span class="font-semibold">CodeRoll</span>,
+                    we've designed a structured curriculum
+                    that
+                    takes you on a logical journey from basic programming concepts to advanced techniques. Our courses
+                    cover
+                    the basics, including variables, data types, and operators, before diving deeper into advanced
+                    topics
+                    like data structures, algorithms and web development frameworks. With our progressive learning
+                    approach,
+                    you will build a strong foundation in programming for a variety of roles in the tech industry.
+                <p>
+            </div>
+        </section>
+
+        <!-- benefits -->
+        <section class="w-full h-fit px-10 flex flex-col gap-20 md:px-32 md:gap-10">
+            <hgroup class="capitalize text-center flex flex-col gap-2">
+                <p class="text-2xl font-semibold text-red-500">our benefits</p>
+                <h1 class="capitalize font-bold text-3xl dark:text-white">by joining Code<span
+                        class="text-red-700">Roll</span> platform, you can enjoy a lot of benefits.</h1>
+                <p class="text-gray-800 text-xl dark:text-gray-300">enroll now to get free access to all of our
+                    benefits and many more</p>
+            </hgroup>
+            <div class="w-full h-[50rem] md:h-96 grid grid-cols-1 grid-rows-4 gap-7 md:grid-rows-2 md:grid-cols-2">
+                <article
+                    class="bg-white shadow-md dark:bg-transparent dark:border dark:border-gray-700 px-7 py-5 flex flex-col gap-1">
+                    <p><i class='bx bx-code-alt text-4xl text-red-600'></i></p>
+                    <h1 class="capitalize font-bold text-xl dark:text-white">more than just code</h1>
+                    <p class="text-gray-800 text-base dark:text-gray-300"><span class="font-semibold">CodeRoll</span>
+                        goes
+                        beyond the "what" and shows you the "why" and "how" behind every concept, so you can code with
+                        real understanding.</p>
+                </article>
+                <article
+                    class="bg-white shadow-md dark:bg-transparent dark:border dark:border-gray-700 px-7 py-5 flex flex-col gap-1">
+                    <p><i class='bx bx-money-withdraw text-4xl text-red-600'></i></p>
+                    <h1 class="capitalize font-bold text-xl dark:text-white">affordable pricing</h1>
+                    <p class="text-gray-800 text-base dark:text-gray-300">With <span
+                            class="font-semibold">CodeRoll</span>
+                        students have a greater chance of succeeding through our very affordable pricing. </p>
+                </article>
+                <article
+                    class="bg-white shadow-md dark:bg-transparent dark:border dark:border-gray-700 px-7 py-5 flex flex-col gap-1">
+                    <p><i class='bx bxs-download text-4xl text-red-600'></i></p>
+                    <h1 class="capitalize font-bold text-xl dark:text-white">downloadable contents</h1>
+                    <p class="text-gray-800 text-base dark:text-gray-300"><span class="font-semibold">CodeRoll</span>
+                        allows students to be able to download contents related to their courses, for more efficiency.
+                    </p>
+                </article>
+                <article
+                    class="bg-white shadow-md dark:bg-transparent dark:border dark:border-gray-700 px-7 py-5 flex flex-col gap-1">
+                    <p><i class='bx bxs-party text-4xl text-red-600'></i></p>
+                    <h1 class="capitalize font-bold text-xl dark:text-white">roll on the go</h1>
+                    <p class="text-gray-800 text-base dark:text-gray-300">With <span
+                            class="font-semibold">CodeRoll</span>
+                        learning never goes boring, we bring the vibes, so that students can roll as they learn</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- testmonials -->
+        <section
+            class="h-fit w-[80%] transform mb-20 md:mx-32 mx-12 bg-white dark:bg-transparent dark:border dark:border-gray-500 shadow-md flex flex-col gap-14 items-center p-10 md:px-40 md:py-20">
+            <h1 class="uppercase text-4xl text-red-700 font-bold text-center">students testimonies</h1>
+            <article class="flex flex-col gap-12 w-full">
+                <div class="w-full h-52 bg-gray-200 dark:bg-gray-900 shadow-md md:transform md:-skew-x-12 relative p-3">
+                    <figure class="absolute w-28 h-28 rounded-full md:skew-x-12 story__shape md:w-46 md:h-46">
+                        <img src="../img/girl.jpg" alt="" class="w-full h-full rounded-full object-top object-cover">
+                    </figure>
+                    <hgroup class="md:skew-x-12 flex flex-col gap-10 mt-12 md:gap-2"> 
+                        <h1 class="capitalize text-lg font-semibold max-sm:pl-20 text-center dark:text-white">mary smith</h1>
+                        <p class="md:pl-52 dark:text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet quis consectetur eaque soluta <span class="max-sm:hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span> <span class="md:hidden">...</span></p>
+                    </hgroup>
+                </div>
+                <div class="w-full h-52 bg-gray-200 dark:bg-gray-900 shadow-md md:transform md:-skew-x-12 relative p-3">
+                    <figure class="absolute w-28 h-28 rounded-full md:skew-x-12 story__shape md:w-46 md:h-46">
+                        <img src="../img/boy.jpg" alt="" class="w-full h-full rounded-full object-top object-cover">
+                    </figure>
+                    <hgroup class="md:skew-x-12 flex flex-col gap-10 mt-12 md:gap-2">
+                        <h1 class="capitalize text-lg font-semibold max-sm:pl-20 text-center dark:text-white">john salmon</h1>
+                        <p class="md:pl-52 dark:text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet quis consectetur eaque soluta
+                            <span class="max-sm:hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span> <span
+                                class="md:hidden">...</span></p>
+                    </hgroup>
+                </div>
+            </article>
+            <a href="#" class="custom-button bg-red-700 text-white">read more stories</a>
+        </section>
+    </main>
+
+    <hr class="text-gray-400 mx-10 my-3">
+
+    <!-- footer -->
+    <footer class="max-sm:hidden">
+        <section class="w-full h-fit p-10 flex justify-between">
+            <div class="w-2/5 flex flex-col gap-2 pl-16">
+                <figure class="flex gap-2 items-center">
+                    <img src="../img/coderoll.png" alt="" width="40">
+                    <h1 class="font-bold text-3xl dark:text-white">Code<span class="text-red-700">Roll</span></h1>
+                </figure>
+                <article class="text-2xl font-medium text-gray-500 ">
+                    <p>At CodeRoll <br> we Code, we Learn, <br> we Roll...</p>
+                </article>
+            </div>
+            <div class="w-1/5">
+                <ul class="capitalize text-xl text-gray-500 flex flex-col gap-2">
+                    <p class="uppercase text-black font-semibold text-2xl dark:text-white">company</p>
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">careers</a></li>
+                    <li><a href="#">blog</a></li>
+                    <li><a href="#">press</a></li>
+                </ul>
+            </div>
+            <div class="w-1/5">
+                <ul class="capitalize text-xl text-gray-500 flex flex-col gap-2">
+                    <p class="uppercase text-black font-semibold text-2xl dark:text-white">information</p>
+                    <li><a href="#">help/FAQs</a></li>
+                    <li><a href="#">tutorials</a></li>
+                    <li><a href="#">pricing</a></li>
+                    <li><a href="#">features</a></li>
+                </ul>
+            </div>
+            <div class="w-1/5">
+                <ul class="capitalize text-xl text-gray-500 flex flex-col gap-2">
+                    <p class="uppercase text-black font-semibold text-2xl dark:text-white">more</p>
+                    <li><a href="#">courses</a></li>
+                    <li><a href="#">registration</a></li>
+                    <li><a href="#">account</a></li>
+                    <li><a href="#">credits</a></li>
+                </ul>
+            </div>
+        </section>
+        <hr class="text-gray-400 mx-10 my-2">
+        <div class="flex px-10 py-2 justify-between text-lg text-gray-500">
+            <p>&copy; 2025 CodeRoll - Code | Learn | Roll</p>
+            <p>Terms & Condition | Privacy Policy</p>
+        </div>
+    </footer>
+    <footer class="md:hidden">
+        <div class=" text-lg text-gray-500 px-10 py-2 text-center flex flex-col gap-2">
+            <p>&copy; 2025 CodeRoll - Code | Learn | Roll</p>
+            <p>Terms & Condition | Privacy Policy</p>
+        </div>
+    </footer>
+
+    <!-- Sign Up -->
+    <div class="signup" id="signup">
+        <div class="signup__content relative">
+            <a href="#" class="text-3xl text-gray-500 absolute left-5 top-3 hover:text-black">&times;</a>
+            <article class="md:w-1/2 flex flex-col gap-7 items-center p-7 md:p-14">
+                <header>
+                    <h1 class="text-5xl text-red-700 uppercase font-bold">sign up</h1>
+                </header>
+                <form action="#" class="flex flex-col items-center gap-5">
+                    <input type="text" placeholder="FULL NAME" class="w-full p-3 bg-white shadow-md outline-none"
+                        required>
+                    <input type="email" placeholder="EMAIL ADDRESS" class="w-full p-3 bg-white shadow-md outline-none"
+                        required>
+                    <input type="password" placeholder="PASSWORD" class="w-full p-3 bg-white shadow-md outline-none"
+                        required>
+                    <span>
+                        <input type="checkbox" class="cursor-pointer" required> By registering, you have agreed with our
+                        <a href="#" class="hover:text-blue-600 underline">T&C and Privacy Policy</a>
+                    </span>
+                    <button type="submit"
+                        class="w-40 py-2 content-center uppercase bg-red-700 text-white text-xl font-semibold rounded-lg shadow-md hover:-translate-y-0.5 cursor-pointer">sign
+                        up</button>
+                </form>
+                <figure>
+                    <p class="text-center">Already have an account, <br><a href="#signin"
+                            class="underline hover:text-blue-600">Sign In Here</a></p>
+                </figure>
+            </article>
+        </div>
+    </div>
+
+    <!-- Sign In -->
+    <div class="signup" id="signin">
+        <div class="signup__content relative">
+            <a href="#" class="text-3xl text-gray-500 absolute left-5 top-3 hover:text-black">&times;</a>
+            <article class="flex flex-col gap-10 p-7 max-sm:mt-10 md:w-1/2 md:p-14">
+                <header>
+                    <h1 class="text-5xl text-red-700 uppercase font-bold text-center">sign in</h1>
+                </header>
+                <form action="#" class="flex flex-col items-center gap-7">
+                    <input type="text" class="w-full bg-white p-3 shadow-md outline-none" placeholder="Username Or Email Address"
+                        required>
+                    <input type="password" class="w-full bg-white p-3 shadow-md outline-none" placeholder="PASSWORD" required>
+                    <button type="submit"
+                        class="w-40 py-2 content-center uppercase bg-red-700 text-white text-xl font-semibold rounded-lg shadow-md hover:-translate-y-0.5 cursor-pointer">sign
+                        in</button>
+                </form>
+                <figure>
+                    <p class="text-center">Don't have an account, <br><a href="#signup"
+                            class="underline hover:text-blue-600">Sign Up
+                            Here</a></p>
+                </figure>
+            </article>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- title -->
+    <title>CodeRoll - Contact Us</title>
+
+    <!-- styling-link -->
+    <link rel="stylesheet" href="../src/output.css">
+
+    <!-- boxicon-link -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- favicon-link -->
+    <link rel="shortcut icon" href="../img/coderoll.png" type="image/x-icon">
+</head>
+
+<body class="dark:bg-gray-950 bg-gray-100 select-none">
+
+    <!-- navigation-bar -->
+    <nav
+        class="w-full h-16 shadow-md fixed flex justify-between items-center px-10 z-50 bg-gray-100  top-0 dark:bg-gray-950 max-sm:px-4">
+        <div class="flex items-center gap-2">
+            <img src="../img/coderoll.png" alt="" width="45">
+            <p class=" text-4xl font-bold dark:text-white">Code<span class="text-red-600">Roll</span></p>
+        </div>
+        <ul class="flex gap-10 text-gray-500 capitalize text-xl font-medium max-sm:hidden">
+            <li class="hover:text-black dark:hover:text-white"><a href="../index.html">home</a></li>
+            <li class="hover:text-black dark:hover:text-white"><a href="./about.html">about us</a></li>
+            <li class="hover:text-black dark:hover:text-white"><a href="./courses.html">courses</a></li>
+            <li class="hover:text-black dark:hover:text-white"><a href="#">contact</a></li>
+        </ul>
+        <figure class="flex gap-5 max-sm:hidden">
+            <a href="#signup" class="custom-nav-button bg-red-600 text-white">sign up</a>
+            <a href="#signin" class="custom-nav-button bg-black text-white dark:bg-white dark:text-black">sign in</a>
+        </figure>
+        <a href="#phone-screen"
+            class="md:hidden text-3xl text-gray-500 hover:text-black dark:hover:text-white ">&#9776;</a>
+        <div class=" hidden target:block fixed top-0 right-0 w-[250px] h-full bg-gray-200 p-[20px] shadow-lg dark:bg-gray-950  "
+            id="phone-screen">
+            <a href="#"
+                class="text-4xl right-5 absolute top-2.5 hover:text-black dark:hover:text-white text-gray-500">&times;</a>
+            <ul class="text-gray-500 capitalize text-xl font-medium flex flex-col gap-3 mt-10">
+                <li class="hover:text-black dark:hover:text-white hover:translate-x-0.5"><a
+                        href="../index.html">home</a>
+                </li>
+                <li class="hover:text-black dark:hover:text-white hover:translate-x-0.5"><a href="./about.html">about
+                        us</a>
+                </li>
+                <li class="hover:text-black dark:hover:text-white hover:translate-x-0.5"><a
+                        href="./courses.html">courses</a>
+                </li>
+                <li class="hover:text-black dark:hover:text-white hover:translate-x-0.5"><a href="#">contact</a>
+                </li>
+                <hr>
+                <li class="hover:text-red-500 hover:translate-x-0.5"><a href="#signup">sign up</a></li>
+                <li class="hover:text-red-500 hover:translate-x-0.5"><a href="#signin">sign in</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="px-10 my-36 md:px-32">
+
+        <!-- Contact Us -->
+        <section class="w-full h-fit bg-white shadow-lg dark:shadow-none dark:bg-gray-900">
+            <div class="text-center pt-10 flex flex-col gap-5">
+                <h1 class=" uppercase text-red-700 text-5xl font-bold">contact us</h1>
+                <hr class="text-gray-700 mx-10 font-bold md:mx-20">
+                <p class="capitalize md:text-xl dark:text-gray-300">we would &heartsuit; to help you, <br>
+                    leave us a message.</p>
+            </div>
+            <div class="p-10 flex flex-col md:flex-row md:px-20 gap-5 gap-20">
+                <article class="md:w-1/2">
+                    <form action="" class="flex flex-col gap-5">
+                        <figure class="flex  flex-col gap-2 font-medium text-gray-700">
+                            <label class="dark:text-white" for="name">Name:</label>
+                            <input type="text" id="name" placeholder="Enter your name"
+                                class="border px-3 py-1.5 w-full border-gray-600 outline-none dark:bg-white dark:border-none"
+                                required>
+                        </figure>
+                        <figure class="flex  flex-col gap-2 font-medium text-gray-700">
+                            <label class="dark:text-white" for="email">Email:</label>
+                            <input type="email" id="email" placeholder="Email address"
+                                class="border px-3 py-1.5 w-full border-gray-600 outline-none dark:bg-white dark:border-none"
+                                required>
+                        </figure>
+                        <figure class=" font-medium text-gray-700">
+                            <textarea name="" id="" placeholder="Enter your message"
+                                class="border dark:bg-white dark:border-none border-gray-600 w-full h-52 px-3 py-1.5 outline-none"
+                                required></textarea>
+                        </figure>
+                        <figure class="text-center">
+                            <button class="uppercase font-bold py-2 px-20 bg-red-700 text-white shadow-md"
+                                type="submit">send</button>
+                        </figure>
+                    </form>
+                </article>
+                <article class="md:w-1/2 flex flex-col items-center justify-center text-center gap-5 text-xl dark:text-gray-400">
+                    <hgroup>
+                        <p><span class="text-2xl font-semibold">CodeRoll HQ</span>, <br> 7, Eunice Olive Street, Ogun State Nigeria</p>
+                    </hgroup>
+                    <hgroup>
+                        <p>(+234) 707 884 6633</p>
+                    </hgroup>
+                    <hgroup>
+                        <p>coding@coderoll.com</p>
+                    </hgroup>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+
+    <hr class="text-gray-400 mx-10 my-3">
+
+    <!-- footer -->
+    <footer class="max-sm:hidden">
+        <section class="w-full h-fit p-10 flex justify-between">
+            <div class="w-2/5 flex flex-col gap-2 pl-16">
+                <figure class="flex gap-2 items-center">
+                    <img src="../img/coderoll.png" alt="" width="40">
+                    <h1 class="font-bold text-3xl dark:text-white">Code<span class="text-red-700">Roll</span></h1>
+                </figure>
+                <article class="text-2xl font-medium text-gray-500 ">
+                    <p>At CodeRoll <br> we Code, we Learn, <br> we Roll...</p>
+                </article>
+            </div>
+            <div class="w-1/5">
+                <ul class="capitalize text-xl text-gray-500 flex flex-col gap-2">
+                    <p class="uppercase text-black font-semibold text-2xl dark:text-white">company</p>
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">careers</a></li>
+                    <li><a href="#">blog</a></li>
+                    <li><a href="#">press</a></li>
+                </ul>
+            </div>
+            <div class="w-1/5">
+                <ul class="capitalize text-xl text-gray-500 flex flex-col gap-2">
+                    <p class="uppercase text-black font-semibold text-2xl dark:text-white">information</p>
+                    <li><a href="#">help/FAQs</a></li>
+                    <li><a href="#">tutorials</a></li>
+                    <li><a href="#">pricing</a></li>
+                    <li><a href="#">features</a></li>
+                </ul>
+            </div>
+            <div class="w-1/5">
+                <ul class="capitalize text-xl text-gray-500 flex flex-col gap-2">
+                    <p class="uppercase text-black font-semibold text-2xl dark:text-white">more</p>
+                    <li><a href="#">courses</a></li>
+                    <li><a href="#">registration</a></li>
+                    <li><a href="#">account</a></li>
+                    <li><a href="#">credits</a></li>
+                </ul>
+            </div>
+        </section>
+        <hr class="text-gray-400 mx-10 my-2">
+        <div class="flex px-10 py-2 justify-between text-lg text-gray-500">
+            <p>&copy; 2025 CodeRoll - Code | Learn | Roll</p>
+            <p>Terms & Condition | Privacy Policy</p>
+        </div>
+    </footer>
+    <footer class="md:hidden">
+        <div class=" text-lg text-gray-500 px-10 py-2 text-center flex flex-col gap-2">
+            <p>&copy; 2025 CodeRoll - Code | Learn | Roll</p>
+            <p>Terms & Condition | Privacy Policy</p>
+        </div>
+    </footer>
+
+    <!-- Sign Up -->
+    <div class="signup" id="signup">
+        <div class="signup__content relative">
+            <a href="#" class="text-3xl text-gray-500 absolute left-5 top-3 hover:text-black">&times;</a>
+            <article class="md:w-1/2 flex flex-col gap-7 items-center p-7 md:p-14">
+                <header>
+                    <h1 class="text-5xl text-red-700 uppercase font-bold">sign up</h1>
+                </header>
+                <form action="#" class="flex flex-col items-center gap-5">
+                    <input type="text" placeholder="FULL NAME" class="w-full p-3 bg-white shadow-md outline-none" required>
+                    <input type="email" placeholder="EMAIL ADDRESS" class="w-full p-3 bg-white shadow-md outline-none"
+                        required>
+                    <input type="password" placeholder="PASSWORD" class="w-full p-3 bg-white shadow-md outline-none"
+                        required>
+                    <span>
+                        <input type="checkbox" class="cursor-pointer" required> By registering, you have agreed with our
+                        <a href="#" class="hover:text-blue-600 underline">T&C and Privacy Policy</a>
+                    </span>
+                    <button type="submit"
+                        class="w-40 py-2 content-center uppercase bg-red-700 text-white text-xl font-semibold rounded-lg shadow-md hover:-translate-y-0.5 cursor-pointer">sign
+                        up</button>
+                </form>
+                <figure>
+                    <p class="text-center">Already have an account, <br><a href="#signin"
+                            class="underline hover:text-blue-600">Sign In Here</a></p>
+                </figure>
+            </article>
+        </div>
+    </div>
+    
+    <!-- Sign In -->
+    <div class="signup" id="signin">
+        <div class="signup__content relative">
+            <a href="#" class="text-3xl text-gray-500 absolute left-5 top-3 hover:text-black">&times;</a>
+            <article class="flex flex-col gap-10 p-7 max-sm:mt-10 md:w-1/2 md:p-14">
+                <header>
+                    <h1 class="text-5xl text-red-700 uppercase font-bold text-center">sign in</h1>
+                </header>
+                <form action="#" class="flex flex-col items-center gap-7">
+                    <input type="text" class="w-full bg-white p-3 shadow-md outline-none" placeholder="Username Or Email Address"
+                        required>
+                    <input type="password" class="w-full bg-white p-3 shadow-md outline-none" placeholder="PASSWORD" required>
+                    <button type="submit"
+                        class="w-40 py-2 content-center uppercase bg-red-700 text-white text-xl font-semibold rounded-lg shadow-md hover:-translate-y-0.5 cursor-pointer">sign
+                        in</button>
+                </form>
+                <figure>
+                    <p class="text-center">Don't have an account, <br><a href="#signup"
+                            class="underline hover:text-blue-600">Sign Up
+                            Here</a></p>
+                </figure>
+            </article>
+        </div>
+    </div>
+</body>
+
+</html>

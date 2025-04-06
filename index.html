@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- title -->
+    <title>CodeRoll - Code | Learn | Roll</title>
+
+    <!-- styling-link -->
+    <link rel="stylesheet" href="./src/output.css">
+
+    <!-- boxicon-link -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- favicon-link -->
+    <link rel="shortcut icon" href="./img/coderoll.png" type="image/x-icon">
+</head>
+
+<body class="dark:bg-gray-950 bg-gray-100 select-none">
+
+    <!-- navigation-bar -->
+    <nav
+        class="w-full h-16 shadow-md fixed flex justify-between items-center px-10 z-50 bg-gray-100  top-0 dark:bg-gray-950 max-sm:px-4">
+        <div class="flex items-center gap-2">
+            <img src="./img/coderoll.png" alt="" width="45">
+            <p class=" text-4xl font-bold dark:text-white">Code<span class="text-red-600">Roll</span></p>
+        </div>
+        <ul class="flex gap-10 text-gray-500 capitalize text-xl font-medium max-sm:hidden">
+            <li class="hover:text-black dark:hover:text-white"><a href="#">home</a></li>
+            <li class="hover:text-black dark:hover:text-white"><a href="./public/about.html">about us</a></li>
+            <li class="hover:text-black dark:hover:text-white"><a href="./public/courses.html">courses</a></li>
+            <li class="hover:text-black dark:hover:text-white"><a href="./public/contact.html">contact</a></li>
+        </ul>
+        <figure class="flex gap-5 max-sm:hidden">
+            <a href="#signup" class="custom-nav-button bg-red-600 text-white">sign up</a>
+            <a href="#signin" class="custom-nav-button bg-black text-white dark:bg-white dark:text-black">sign in</a>
+        </figure>
+        <a href="#phone-screen"
+            class="md:hidden text-3xl text-gray-500 hover:text-black dark:hover:text-white ">&#9776;</a>
+        <div class=" hidden target:block fixed top-0 right-0 w-[250px] h-full bg-gray-200 p-[20px] shadow-lg dark:bg-gray-950  "
+            id="phone-screen">
+            <a href="#"
+                class="text-4xl right-5 absolute top-2.5 hover:text-black dark:hover:text-white text-gray-500">&times;</a>
+            <ul class="text-gray-500 capitalize text-xl font-medium flex flex-col gap-3 mt-10">
+                <li class="hover:text-black dark:hover:text-white hover:translate-x-0.5"><a href="#">home</a></li>
+                <li class="hover:text-black dark:hover:text-white hover:translate-x-0.5"><a
+                        href="./public/about.html">about us</a>
+                </li>
+                <li class="hover:text-black dark:hover:text-white hover:translate-x-0.5"><a
+                        href="./public/courses.html">courses</a>
+                </li>
+                <li class="hover:text-black dark:hover:text-white hover:translate-x-0.5"><a
+                        href="./public/contact.html">contact</a>
+                </li>
+                <hr>
+                <li class="hover:text-red-500 hover:translate-x-0.5"><a href="#signup">sign up</a></li>
+                <li class="hover:text-red-500 hover:translate-x-0.5"><a href="#signin">sign in</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- main -->
+    <main class="mt-36 flex flex-col gap-40 ">
+
+        <!-- welcome-section -->
+        <section class="w-full h-fit px-10  flex flex-col gap-10    md:flex-row md:items-center md:px-32 md:gap-24 ">
+            <div class="flex flex-col gap-5 animate__animated animate__fadeInLeft animate__slow">
+                <h1 class="capitalize font-bold text-6xl dark:text-white">unleash your potential with top <span
+                        class="text-red-700">coding courses.</span></h1>
+                <p class="text-gray-800 text-xl dark:text-gray-300">Elevate your coding skills to new heights with
+                    our curated selection of courses, designed to
+                    inspire, educate, and empower your
+                    programming journey.</p>
+                <figure class="flex gap-5">
+                    <a href="./public/about.html" class="custom-button bg-red-700 text-white">learn more</a>
+                    <a href="#signup" class="custom-button bg-black text-white dark:bg-white dark:text-black">enroll now</a>
+                </figure>
+            </div>
+            <div class="max-sm:px-2 animate__animated animate__fadeInRight animate__slow animate__delay-2s">
+                <figure class="w-96 h-96 bg-red-700 relative rounded-full">
+                    <img src="./img/image-coderoll.png" alt="" class="object-cover object-left w-full h-full">
+                    <figure
+                        class="w-36 h-16 bg-white border border-red-400 rounded-2xl absolute top-32 -left-10 shadow-md flex gap-2 items-center p-2">
+                        <div><img src="./img/home-video.png" alt="" width="45"></div>
+                        <hgroup>
+                            <h1 class="font-bold text-xl">2K+</h1>
+                            <p class="text-[10px] font-bold text-gray-600">Video Courses</p>
+                        </hgroup>
+                    </figure>
+                    <figure
+                        class="w-24 h-36 bg-white border border-red-400 rounded-2xl absolute -top-7 left-76 shadow-md flex flex-col items-center gap-2 justify-center">
+                        <div><img src="./img/home-load.png" alt="" width="45"></div>
+                        <hgroup class="text-center">
+                            <h1 class="font-bold text-xl">5K+</h1>
+                            <p class="text-[10px] font-bold text-gray-600">Online Courses</p>
+                        </hgroup>
+                    </figure>
+                    <figure
+                        class="w-32 h-16 bg-white border border-red-400 rounded-2xl absolute bottom-10 left-64 shadow-md flex gap-2 items-center p-2">
+                        <div><img src="./img/home-tutor.png" alt="" width="45"></div>
+                        <hgroup>
+                            <p class="text-[10px] font-bold text-gray-600">Tutors</p>
+                            <h1 class="font-bold text-xl">250+</h1>
+                        </hgroup>
+                    </figure>
+                    <figure class="w-12 h-12 rounded-full bg-red-700 absolute bottom-3 "></figure>
+                    <figure
+                        class="w-96 h-96  rounded-full border border-red-400 absolute bg-transparent -z-10 -top-4 -left-4">
+                    </figure>
+                </figure>
+
+            </div>
+        </section>
+
+        <!-- about-section -->
+        <section
+            class="w-full h-fit px-10 flex flex-col gap-10   md:flex-row-reverse md:items-center md:px-32 md:gap-24"
+            id="about">
+            <div class="flex flex-col gap-3 md:w-1/2">
+                <p class="text-red-500 font-semibold capitalize text-2xl"><a href="./public/about.html"
+                        class="hover:text-black dark:hover:text-white">about us &rightarrow;</a></p>
+                <h1 class="capitalize text-4xl font-bold dark:text-white">coding together with the experts</h1>
+                <p class="text-lg dark:text-gray-300"><span class="font-semibold">CodeRoll</span> is an E-learning
+                    platform involved in
+                    teaching students all they need to know about programming. Our goal extends furthermore, by not
+                    just teaching students how to code, but also helping them think like a professional software
+                    engineer
+                    with problem-solving and much more skills that will help them achieve their coding goals.</p>
+            </div>
+            <div class="w-[25rem] h-[25rem] relative overflow-hidden">
+                <div class="carousel"> <img src="./img/one.png" alt="" class="w-full h-full"> </div>
+                <div class="carousel"> <img src="./img/two.png" alt="" class="w-full h-full"> </div>
+                <div class="carousel"> <img src="./img/three.png" alt="" class="w-full h-full"> </div>
+            </div>
+        </section>
+
+        <!-- courses-section -->
+        <section class="w-full h-fit px-10 flex flex-col gap-20 md:px-32 md:gap-10" id="courses">
+            <div class="capitalize flex flex-col gap-3">
+                <p class="capitalize text-2xl text-red-500 font-semibold"><a href="./public/courses.html"
+                        class="hover:text-black dark:hover:text-white">explore
+                        programs &rightarrow;</a></p>
+                <h1 class="capitalize text-4xl font-bold dark:text-white">our most popular classes</h1>
+                <p class="text-lg dark:text-gray-300">let's join our famous classes, the knowledge provided will
+                    definitely be useful for you.</p>
+            </div>
+            <div
+                class="w-full h-[60rem] md:h-72 grid grid-cols-1 grid-rows-4 gap-20 md:grid-rows-2 md:grid-cols-2 md:gap-7">
+                <article
+                    class="max-sm:bg-white max-sm:shadow-md max-sm:relative md:flex md:gap-2 dark:max-sm:bg-transparent dark:max-sm:border dark:max-sm:border-gray-700">
+                    <figure
+                        class="w-32 h-32 max-sm:rounded-full shadow-md bg-blue-500 max-sm:absolute -top-16 left-32   md:w-1/4 md:h-full ">
+                        <img src="./img/course-one.jpg" alt="" class="w-full h-full object-cover max-sm:rounded-full">
+                    </figure>
+                    <hgroup
+                        class="p-4 flex flex-col gap-1 pt-16 md:pt-4 md:w-3/4 md:bg-white md:shadow-md dark:md:bg-transparent dark:md:border dark:md:border-gray-700">
+                        <h1 class="capitalize text-xl text-gray-700 font-semibold dark:text-gray-100">the ultimate HTML5
+                            and CSS3 series</h1>
+                        <p class="text-sm text-gray-600">Learn how to build responsive websites using HTML5 and CSS3
+                            with our
+                            comprehensive course series.</p>
+                        <button class="w-14 px-2 rounded-full bg-gray-900 text-white ">14h</button>
+                    </hgroup>
+                </article>
+                <article
+                    class="max-sm:bg-white max-sm:shadow-md max-sm:relative md:flex md:gap-2 dark:max-sm:bg-transparent dark:max-sm:border dark:max-sm:border-gray-700">
+                    <figure
+                        class="w-32 h-32 max-sm:rounded-full shadow-md bg-blue-500 max-sm:absolute -top-16 left-32   md:w-1/4 md:h-full ">
+                        <img src="./img/course-four.png" alt="" class="w-full h-full object-cover max-sm:rounded-full">
+                    </figure>
+                    <hgroup
+                        class="p-4 flex flex-col gap-1 pt-16 md:pt-4 md:w-3/4 md:bg-white md:shadow-md dark:md:bg-transparent dark:md:border dark:md:border-gray-700">
+                        <h1 class="capitalize text-xl text-gray-700 font-semibold dark:text-gray-100">the ultimate
+                            JAVASCRIPT series</h1>
+                        <p class="text-sm text-gray-600">Master JavaScript: Go from novice to professional. Everything
+                            you need to know about JavaScript is here.</p>
+                        <button class="w-14 px-2 rounded-full bg-gray-900 text-white ">10h</button>
+                    </hgroup>
+                </article>
+                <article
+                    class="max-sm:bg-white max-sm:shadow-md max-sm:relative md:flex md:gap-2 dark:max-sm:bg-transparent dark:max-sm:border dark:max-sm:border-gray-700">
+                    <figure
+                        class="w-32 h-32 max-sm:rounded-full shadow-md bg-blue-500 max-sm:absolute -top-16 left-32   md:w-1/4 md:h-full ">
+                        <img src="./img/course-two.jpg" alt="" class="w-full h-full object-cover max-sm:rounded-full">
+                    </figure>
+                    <hgroup
+                        class="p-4 flex flex-col gap-1 pt-16 md:pt-4 md:w-3/4 md:bg-white md:shadow-md dark:md:bg-transparent dark:md:border dark:md:border-gray-700">
+                        <h1 class="capitalize text-xl text-gray-700 font-semibold dark:text-gray-100">the ultimate REACT
+                            NATIVE series</h1>
+                        <p class="text-sm text-gray-600">Everything you need to know about React Native is here. Learn
+                            how to build
+                            mobile apps using React Native.</p>
+                        <button class="w-14 px-2 rounded-full bg-gray-900 text-white ">12h</button>
+                    </hgroup>
+                </article>
+                <article
+                    class="max-sm:bg-white max-sm:shadow-md max-sm:relative md:flex md:gap-2 dark:max-sm:bg-transparent dark:max-sm:border dark:max-sm:border-gray-700">
+                    <figure
+                        class="w-32 h-32 max-sm:rounded-full shadow-md bg-blue-500 max-sm:absolute -top-16 left-32   md:w-1/4 md:h-full ">
+                        <img src="./img/course-three.jpg" alt="" class="w-full h-full object-cover max-sm:rounded-full">
+                    </figure>
+                    <hgroup
+                        class="p-4 flex flex-col gap-1 pt-16 md:pt-4 md:w-3/4 md:bg-white md:shadow-md dark:md:bg-transparent dark:md:border dark:md:border-gray-700">
+                        <h1 class="capitalize text-xl text-gray-700 font-semibold dark:text-gray-100">the ultimate
+                            PYTHON series</h1>
+                        <p class="text-sm text-gray-600">Sharpen your Python skills with our full course
+                            series.
+                            Learn how to build
+                            applications using Python.</p>
+                        <button class="w-14 px-2 rounded-full bg-gray-900 text-white ">16h</button>
+                    </hgroup>
+                </article>
+            </div>
+        </section>
+
+        <!-- contact-section -->
+        <section class="px-10 flex flex-col gap-28" id="contact">
+            <div class="items-center text-center flex flex-col gap-5 md:px-40">
+                <p class="capitalize font-semibold text-lg dark:text-gray-600">want to make more enquiries?</p>
+                <h1 class="capitalize text-6xl font-bold dark:text-white">contact us now</h1>
+                <p class="text-base dark:text-gray-500">Have a question, need assistance, or simply want to share your
+                    testimonies with us? We'd love to hear from you! Feel free to reach out to our friendly team through
+                    the channels below ↓</p>
+                <a href="./public/contact.html"
+                    class="w-36 h-12 capitalize bg-red-700 rounded-tl-xl rounded-br-xl text-white content-center text-xl font-medium hover:-translate-y-0.5 shadow-md hover:shadow-lg">contact
+                    now</a>
+            </div>
+            <div class="md:flex justify-between">
+                <h1 class="capitalize text-xl text-gray-500 max-sm:hidden">get connected with us on social networks:
+                </h1>
+                <figure class="flex gap-5 items-center max-sm:justify-center">
+                    <a href="#"><i
+                            class='bx text-3xl hover:text-black dark:hover:text-white bxl-github hover:animate-spin text-gray-500'></i></a>
+                    <a href="#"><i
+                            class='bx text-3xl hover:text-black dark:hover:text-white bxl-facebook-circle hover:animate-spin text-gray-500'></i>
+                    </a>
+                    <a href="#"><i
+                            class='bx text-3xl hover:text-black dark:hover:text-white bxl-linkedin-square hover:animate-spin text-gray-500'></i>
+                    </a>
+                    <a href="#"><i
+                            class='bx text-3xl hover:text-black dark:hover:text-white bxl-twitter hover:animate-spin text-gray-500'></i>
+                    </a>
+                </figure>
+            </div>
+        </section>
+    </main>
+
+    <hr class="text-gray-400 mx-10 my-3">
+
+    <!-- footer -->
+    <footer class="max-sm:hidden">
+        <section class="w-full h-fit p-10 flex justify-between">
+            <div class="w-2/5 flex flex-col gap-2 pl-16">
+                <figure class="flex gap-2 items-center">
+                    <img src="./img/coderoll.png" alt="" width="40">
+                    <h1 class="font-bold text-3xl dark:text-white">Code<span class="text-red-700">Roll</span></h1>
+                </figure>
+                <article class="text-2xl font-medium text-gray-500 ">
+                    <p>At CodeRoll <br> we Code, we Learn, <br> we Roll...</p>
+                </article>
+            </div>
+            <div class="w-1/5">
+                <ul class="capitalize text-xl text-gray-500 flex flex-col gap-2">
+                    <p class="uppercase text-black font-semibold text-2xl dark:text-white">company</p>
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">careers</a></li>
+                    <li><a href="#">blog</a></li>
+                    <li><a href="#">press</a></li>
+                </ul>
+            </div>
+            <div class="w-1/5">
+                <ul class="capitalize text-xl text-gray-500 flex flex-col gap-2">
+                    <p class="uppercase text-black font-semibold text-2xl dark:text-white">information</p>
+                    <li><a href="#">help/FAQs</a></li>
+                    <li><a href="#">tutorials</a></li>
+                    <li><a href="#">pricing</a></li>
+                    <li><a href="#">features</a></li>
+                </ul>
+            </div>
+            <div class="w-1/5">
+                <ul class="capitalize text-xl text-gray-500 flex flex-col gap-2">
+                    <p class="uppercase text-black font-semibold text-2xl dark:text-white">more</p>
+                    <li><a href="#">courses</a></li>
+                    <li><a href="#">registration</a></li>
+                    <li><a href="#">account</a></li>
+                    <li><a href="#">credits</a></li>
+                </ul>
+            </div>
+        </section>
+        <hr class="text-gray-400 mx-10 my-2">
+        <div class="flex px-10 py-2 justify-between text-lg text-gray-500">
+            <p>&copy; 2025 CodeRoll - Code | Learn | Roll</p>
+            <p>Terms & Condition | Privacy Policy</p>
+        </div>
+    </footer>
+    <footer class="md:hidden">
+        <div class=" text-lg text-gray-500 px-10 py-2 text-center flex flex-col gap-2">
+            <p>&copy; 2025 CodeRoll - Code | Learn | Roll</p>
+            <p>Terms & Condition | Privacy Policy</p>
+        </div>
+    </footer>
+
+    <!-- Sign Up -->
+    <div class="signup" id="signup">
+        <div class="signup__content relative">
+            <a href="#" class="text-3xl text-gray-500 absolute left-5 top-3 hover:text-black">&times;</a>
+            <article class="md:w-1/2 flex flex-col gap-7 items-center p-7 md:p-14">
+                <header>
+                    <h1 class="text-5xl text-red-700 uppercase font-bold">sign up</h1>
+                </header>
+                <form action="#" class="flex flex-col items-center gap-5">
+                    <input type="text" placeholder="FULL NAME" class="w-full p-3 bg-white shadow-md outline-none"
+                        required>
+                    <input type="email" placeholder="EMAIL ADDRESS" class="w-full p-3 bg-white shadow-md outline-none"
+                        required>
+                    <input type="password" placeholder="PASSWORD" class="w-full p-3 bg-white shadow-md outline-none"
+                        required>
+                    <span>
+                        <input type="checkbox" class="cursor-pointer" required> By registering, you have agreed with our
+                        <a href="#" class="hover:text-blue-600 underline">T&C and Privacy Policy</a>
+                    </span>
+                    <button type="submit"
+                        class="w-40 py-2 content-center uppercase bg-red-700 text-white text-xl font-semibold rounded-lg shadow-md hover:-translate-y-0.5 cursor-pointer">sign
+                        up</button>
+                </form>
+                <figure>
+                    <p class="text-center">Already have an account, <br><a href="#signin"
+                            class="underline hover:text-blue-600">Sign In Here</a></p>
+                </figure>
+            </article>
+        </div>
+    </div>
+
+    <!-- Sign In -->
+    <div class="signup" id="signin">
+        <div class="signup__content relative">
+            <a href="#" class="text-3xl text-gray-500 absolute left-5 top-3 hover:text-black">&times;</a>
+            <article class="flex flex-col gap-10 p-7 max-sm:mt-10 md:w-1/2 md:p-14">
+                <header>
+                    <h1 class="text-5xl text-red-700 uppercase font-bold text-center">sign in</h1>
+                </header>
+                <form action="#" class="flex flex-col items-center gap-7">
+                    <input type="text" class="w-full bg-white p-3 shadow-md outline-none"
+                        placeholder="Username Or Email Address" required>
+                    <input type="password" class="w-full bg-white p-3 shadow-md outline-none" placeholder="PASSWORD" required>
+                    <button type="submit"
+                        class="w-40 py-2 content-center uppercase bg-red-700 text-white text-xl font-semibold rounded-lg shadow-md hover:-translate-y-0.5 cursor-pointer">sign
+                        in</button>
+                </form>
+                <figure>
+                    <p class="text-center">Don't have an account, <br><a href="#signup"
+                            class="underline hover:text-blue-600">Sign Up
+                            Here</a></p>
+                </figure>
+            </article>
+        </div>
+    </div>
+
+</body>
+
+</html>

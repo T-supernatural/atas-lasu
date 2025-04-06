@@ -1,0 +1,95 @@
+@import "tailwindcss";
+@import 'animate.css';
+
+
+.custom-button {
+    @apply text-lg capitalize font-semibold px-4 py-2 rounded-br-xl rounded-tl-xl shadow-md hover:-translate-y-[1.5px] hover:shadow-lg;
+}
+
+.custom-nav-button {
+    @apply text-base capitalize font-medium px-3 py-1 rounded shadow-md hover:-translate-y-[1px] hover:shadow-lg;
+}
+
+.carousel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s;
+    animation: slide 21s infinite;
+    width: inherit;
+    height: inherit;
+}
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+    }
+
+    5% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    30% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.carousel:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.carousel:nth-child(2) {
+    animation-delay: 7s;
+}
+
+.carousel:nth-child(3) {
+    animation-delay: 14s;
+}
+
+.signup {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s;
+}
+
+.signup:target {
+    opacity: 1;
+    visibility: visible;
+    backdrop-filter: blur(7px);
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.signup:target .signup__content {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.signup__content {
+    background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../img/sign.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all .5s .2s;
+
+    @apply max-sm:bg-gradient-to-r max-sm:from-gray-300 max-sm:from-0% max-sm:to-gray-300 max-sm:to-100% absolute top-1/2 left-1/2 w-3/4 h-[80vh] shadow-md rounded-sm overflow-hidden opacity-0 table;
+}
+
+.story__shape {
+    clip-path: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+}
