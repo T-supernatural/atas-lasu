@@ -6,308 +6,408 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- title -->
-    <title>CodeRoll - About Us</title>
+    <title>A.T.A.S - About Us</title>
 
     <!-- styling-link -->
     <link rel="stylesheet" href="../src/output.css">
 
     <!-- boxicon-link -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
 
     <!-- favicon-link -->
-    <link rel="shortcut icon" href="../img/coderoll.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../IMG/LASU-LOGO.png" type="image/x-icon">
+
 </head>
 
-<body class="dark:bg-gray-950 bg-gray-100 select-none">
-
-    <!-- navigation-bar -->
-    <nav
-        class="w-full h-16 shadow-md fixed flex justify-between items-center px-10 z-50 bg-gray-100  top-0 dark:bg-gray-950 max-sm:px-4">
-        <div class="flex items-center gap-2">
-            <img src="../img/coderoll.png" alt="" width="45">
-            <p class=" text-4xl font-bold dark:text-white">Code<span class="text-red-600">Roll</span></p>
+<body class="flex flex-col gap-2 md:gap-5">
+    <!-- Preloader -->
+    <div id="preloader" class="fixed inset-0 z-50 bg-white flex items-center justify-center">
+        <div class="flex flex-col items-center gap-3">
+            <img src="../IMG/ATAS-LOGO-one.png" alt="Loading Logo" class="w-20 h-20 animate-bounce">
+            <p class="text-amber-600 font-semibold text-lg animate-pulse">Loading ATAS world...</p>
         </div>
-        <ul class="flex gap-10 text-gray-500 capitalize text-xl font-medium max-sm:hidden">
-            <li class="hover:text-black dark:hover:text-white"><a href="../index.html">home</a></li>
-            <li class="hover:text-black dark:hover:text-white"><a href="#">about us</a></li>
-            <li class="hover:text-black dark:hover:text-white"><a href="./courses.html">courses</a></li>
-            <li class="hover:text-black dark:hover:text-white"><a href="./contact.html">contact</a></li>
-        </ul>
-        <figure class="flex gap-5 max-sm:hidden">
-            <a href="#signup" class="custom-nav-button bg-red-600 text-white">sign up</a>
-            <a href="#signin" class="custom-nav-button bg-black text-white dark:bg-white dark:text-black">sign in</a>
-        </figure>
-        <a href="#phone-screen"
-            class="md:hidden text-3xl text-gray-500 hover:text-black dark:hover:text-white ">&#9776;</a>
-        <div class=" hidden target:block fixed top-0 right-0 w-[250px] h-full bg-gray-200 p-[20px] shadow-lg dark:bg-gray-950  "
-            id="phone-screen">
-            <a href="#"
-                class="text-4xl right-5 absolute top-2.5 hover:text-black dark:hover:text-white text-gray-500">&times;</a>
-            <ul class="text-gray-500 capitalize text-xl font-medium flex flex-col gap-3 mt-10">
-                <li class="hover:text-black dark:hover:text-white hover:translate-x-0.5"><a
-                        href="../index.html">home</a></li>
-                <li class="hover:text-black dark:hover:text-white hover:translate-x-0.5"><a href="#">about us</a>
+    </div>
+
+    <nav class="fixed">
+        <div class="nav-content">
+            <div class="flex items-center gap-3">
+                <img src="../IMG/ATAS-LOGO-one.png" alt="" width="70px" height="50px">
+                <h1><a href="#">A.T.A.S</a></h1>
+            </div>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li class="home"><a href="#">About Us</a></li>
+
+                <li><a href="./membership.html" class="text-white hover:text-amber-600 transition-colors">Join
+                        Us</a>
                 </li>
-                <li class="hover:text-black dark:hover:text-white hover:translate-x-0.5"><a
-                        href="./courses.html">courses</a>
+
+            </ul>
+            <a href="#navSidebar" class="nav-menu-icon">&#9776;</a>
+        </div>
+
+        <div class="nav-sidebar" id="navSidebar">
+            <a href="#" class="close-btn">&times;</a>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li class="home"><a href="#">About Us</a></li>
+
+                <li><a href="./public/membership.html" class="text-white hover:text-amber-600 transition-colors">Join
+                        Us</a>
                 </li>
-                <li class="hover:text-black dark:hover:text-white hover:translate-x-0.5"><a
-                        href="./contact.html">contact</a>
-                </li>
-                <hr>
-                <li class="hover:text-red-500 hover:translate-x-0.5"><a href="#signup">sign up</a></li>
-                <li class="hover:text-red-500 hover:translate-x-0.5"><a href="#signin">sign in</a></li>
+
             </ul>
         </div>
     </nav>
 
-    <!-- main -->
-    <main class="mt-36 flex flex-col gap-40 ">
-
-        <!-- about-us -->
-        <section class="w-full h-fit px-10  flex flex-col gap-10    md:flex-row md:items-center md:px-32 md:gap-24 ">
-            <div class="flex flex-col gap-5 animate__animated animate__fadeInLeft animate__slow">
-                <h1 class="capitalize font-bold text-6xl text-red-700">about us</h1>
-                <h2 class="capitalize font-bold text-3xl dark:text-white">Code<span class="text-red-700">Roll</span>
-                    providing the best
-                    opportunities to the students around the globe.</h2>
-                <p class="text-gray-800 text-xl dark:text-gray-300">Hi, there. Welcome to CodeRoll - an ELearning
-                    platform,
-                    that focuses on teaching students everything to know about programming. It was started in 2025 and
-                    passionate towards helping students find their place in the real world.</p>
-                <a href="#signup" class="custom-button w-28 bg-red-700 text-white">join us &rightarrow;</a>
-            </div>
-            <div class="max-sm:hidden animate__animated animate__fadeInRight animate__slow animate__delay-2s ">
-                <figure class="md:w-96 md:h-96">
-                    <img src="../img/about-hi.png" alt="" class="w-full h-full object-cover">
-                </figure>
-            </div>
+    <main class="bg-gray-100">
+        <section class="bg-black text-white pt-32 pb-24 px-6 flex flex-col items-center text-center" data-aos="fade-up"
+            data-aos-duration="900">
+            <h1 class="text-5xl font-extrabold mb-4 animate-fadeInDown">About A.T.A.S - L.A.S.U</h1>
+            <p class="max-w-xl text-lg opacity-90 animate-fadeInUp">
+                We are the heartbeat of theatre arts students at Lagos State University, fostering creativity,
+                community, and
+                craft. Dive into our story, mission, and vision.
+            </p>
         </section>
 
-        <!-- features -->
-        <section class="w-full h-fit px-10  flex flex-col gap-10    md:flex-row md:items-center md:px-32 md:gap-24 ">
-            <div class="w-[25rem] h-[25rem] relative">
-                <figure
-                    class="w-80 h-60 bg-red-300 absolute -left-3 -top-6 z-10 transform shadow-md hover:-translate-y-2 hover:z-20 transition-all outline-offset-8 rounded-lg hover:shadow-lg hover:outline-8 hover:outline-red-500">
-                    <img src="../img/course-one.jpg" alt=""
-                        class="w-full h-full object-top object-cover rounded-lg opacity-0 hover:opacity-100">
-                </figure>
-                <figure
-                    class="w-80 h-60 bg-red-600 absolute -right-7 top-12 shadow-md z-10 transform hover:-translate-y-2 hover:z-20 transition-all outline-offset-8 rounded-lg hover:shadow-lg hover:outline-8 hover:outline-red-500">
-                    <img src="../img/course-two.jpg" alt=""
-                        class="w-full h-full object-top object-cover rounded-lg opacity-0 hover:opacity-100">
-                </figure>
-                <figure
-                    class="w-80 h-60 bg-red-800 absolute left-10 bottom-10 z-10 shadow-md transform hover:-translate-y-2 hover:z-20 transition-all outline-offset-8 rounded-lg hover:shadow-lg hover:outline-8 hover:outline-red-500">
-                    <img src="../img/course-three.jpg" alt=""
-                        class="w-full h-full object-top object-cover rounded-lg opacity-0 hover:opacity-100">
-                </figure>
-            </div>
-            <div class="flex flex-col gap-5 md:w-1/2">
-                <p class="text-2xl font-semibold text-red-500">Features</p>
-                <h1 class="capitalize font-bold text-3xl dark:text-white">from beginner to pro: how Code<span
-                        class="text-red-700">Roll</span>'s structured curriculum helps you master programming concept
-                </h1>
-                <p class="text-gray-800 text-xl dark:text-gray-300">At <span class="font-semibold">CodeRoll</span>,
-                    we've designed a structured curriculum
-                    that
-                    takes you on a logical journey from basic programming concepts to advanced techniques. Our courses
-                    cover
-                    the basics, including variables, data types, and operators, before diving deeper into advanced
-                    topics
-                    like data structures, algorithms and web development frameworks. With our progressive learning
-                    approach,
-                    you will build a strong foundation in programming for a variety of roles in the tech industry.
-                <p>
-            </div>
+        <section class="max-w-5xl mx-auto py-16 px-6" data-aos="fade-up" data-aos-duration="900">
+            <h2 class="text-3xl font-semibold mb-6 inline-block pb-2 border-b-4 border-amber-600">Our Story</h2>
+            <p class="mb-4 leading-relaxed" data-aos="fade-up" data-aos-duration="900">
+                Founded by the <em class="font-semibold text-amber-600">23rd Atas lasu Executive - Director D LED
+                    Administration</em>, also with the great passionate students and alumni, A.T.A.S is more than an
+                association — it’s a movement. We
+                unite
+                theatre artists to collaborate, innovate, and elevate the craft on and off the stage.
+            </p>
+            <p class="leading-relaxed" data-aos="fade-up" data-aos-duration="900">
+                Over the years, we've built a vibrant community of creatives who push boundaries, inspire audiences, and
+                support
+                one another. Join us as we continue this journey of artistic excellence.
+            </p>
         </section>
 
-        <!-- benefits -->
-        <section class="w-full h-fit px-10 flex flex-col gap-20 md:px-32 md:gap-10">
-            <hgroup class="capitalize text-center flex flex-col gap-2">
-                <p class="text-2xl font-semibold text-red-500">our benefits</p>
-                <h1 class="capitalize font-bold text-3xl dark:text-white">by joining Code<span
-                        class="text-red-700">Roll</span> platform, you can enjoy a lot of benefits.</h1>
-                <p class="text-gray-800 text-xl dark:text-gray-300">enroll now to get free access to all of our
-                    benefits and many more</p>
-            </hgroup>
-            <div class="w-full h-[50rem] md:h-96 grid grid-cols-1 grid-rows-4 gap-7 md:grid-rows-2 md:grid-cols-2">
-                <article
-                    class="bg-white shadow-md dark:bg-transparent dark:border dark:border-gray-700 px-7 py-5 flex flex-col gap-1">
-                    <p><i class='bx bx-code-alt text-4xl text-red-600'></i></p>
-                    <h1 class="capitalize font-bold text-xl dark:text-white">more than just code</h1>
-                    <p class="text-gray-800 text-base dark:text-gray-300"><span class="font-semibold">CodeRoll</span>
-                        goes
-                        beyond the "what" and shows you the "why" and "how" behind every concept, so you can code with
-                        real understanding.</p>
-                </article>
-                <article
-                    class="bg-white shadow-md dark:bg-transparent dark:border dark:border-gray-700 px-7 py-5 flex flex-col gap-1">
-                    <p><i class='bx bx-money-withdraw text-4xl text-red-600'></i></p>
-                    <h1 class="capitalize font-bold text-xl dark:text-white">affordable pricing</h1>
-                    <p class="text-gray-800 text-base dark:text-gray-300">With <span
-                            class="font-semibold">CodeRoll</span>
-                        students have a greater chance of succeeding through our very affordable pricing. </p>
-                </article>
-                <article
-                    class="bg-white shadow-md dark:bg-transparent dark:border dark:border-gray-700 px-7 py-5 flex flex-col gap-1">
-                    <p><i class='bx bxs-download text-4xl text-red-600'></i></p>
-                    <h1 class="capitalize font-bold text-xl dark:text-white">downloadable contents</h1>
-                    <p class="text-gray-800 text-base dark:text-gray-300"><span class="font-semibold">CodeRoll</span>
-                        allows students to be able to download contents related to their courses, for more efficiency.
+        <section class="bg-gray-100 py-20 px-6" data-aos="fade-up" data-aos-duration="900">
+            <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-start">
+
+                <!-- Mission -->
+                <div class="bg-white rounded-lg shadow-md p-8 animate-fadeInLeft" data-aos="fade-up"
+                    data-aos-duration="900">
+                    <h3 class="text-2xl font-bold text-amber-600 mb-4">Our Mission</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        To nurture the creative talents of every theatre art student at LASU, offering a platform that
+                        encourages expression, growth, and collaboration — both academically and artistically.
                     </p>
-                </article>
-                <article
-                    class="bg-white shadow-md dark:bg-transparent dark:border dark:border-gray-700 px-7 py-5 flex flex-col gap-1">
-                    <p><i class='bx bxs-party text-4xl text-red-600'></i></p>
-                    <h1 class="capitalize font-bold text-xl dark:text-white">roll on the go</h1>
-                    <p class="text-gray-800 text-base dark:text-gray-300">With <span
-                            class="font-semibold">CodeRoll</span>
-                        learning never goes boring, we bring the vibes, so that students can roll as they learn</p>
-                </article>
+                </div>
+
+                <!-- Vision -->
+                <div class="bg-white rounded-lg shadow-md p-8 animate-fadeInRight" data-aos="fade-up"
+                    data-aos-duration="900">
+                    <h3 class="text-2xl font-bold text-amber-600 mb-4">Our Vision</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        To be the most dynamic, inclusive, and impactful student arts association in Nigeria — where
+                        every voice
+                        matters, every story counts, and theatre becomes a tool for change.
+                    </p>
+                </div>
+
             </div>
         </section>
 
-        <!-- testmonials -->
-        <section
-            class="h-fit w-[80%] transform mb-20 md:mx-32 mx-12 bg-white dark:bg-transparent dark:border dark:border-gray-500 shadow-md flex flex-col gap-14 items-center p-10 md:px-40 md:py-20">
-            <h1 class="uppercase text-4xl text-red-700 font-bold text-center">students testimonies</h1>
-            <article class="flex flex-col gap-12 w-full">
-                <div class="w-full h-52 bg-gray-200 dark:bg-gray-900 shadow-md md:transform md:-skew-x-12 relative p-3">
-                    <figure class="absolute w-28 h-28 rounded-full md:skew-x-12 story__shape md:w-46 md:h-46">
-                        <img src="../img/girl.jpg" alt="" class="w-full h-full rounded-full object-top object-cover">
-                    </figure>
-                    <hgroup class="md:skew-x-12 flex flex-col gap-10 mt-12 md:gap-2"> 
-                        <h1 class="capitalize text-lg font-semibold max-sm:pl-20 text-center dark:text-white">mary smith</h1>
-                        <p class="md:pl-52 dark:text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet quis consectetur eaque soluta <span class="max-sm:hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span> <span class="md:hidden">...</span></p>
-                    </hgroup>
+        <section class="bg-white py-20 px-6" data-aos="fade-up" data-aos-duration="900">
+            <div class="max-w-6xl mx-auto text-center mb-14">
+                <h2 class="text-3xl font-bold text-amber-600 mb-4">Our Core Values</h2>
+                <p class="text-gray-600 text-lg">
+                    At the heart of ATAS, we believe in fostering growth, community, and creativity.
+                </p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+                <div class="bg-gray-100 p-6 rounded-xl shadow hover:shadow-lg transition-all duration-300 animate-fadeInUp"
+                    data-aos="fade-up" data-aos-duration="900">
+                    <h3 class="text-xl font-bold mb-2"><i class="fa-solid fa-palette"></i> Creativity</h3>
+                    <p class="text-gray-600">We celebrate the power of imagination in every performance and project.</p>
                 </div>
-                <div class="w-full h-52 bg-gray-200 dark:bg-gray-900 shadow-md md:transform md:-skew-x-12 relative p-3">
-                    <figure class="absolute w-28 h-28 rounded-full md:skew-x-12 story__shape md:w-46 md:h-46">
-                        <img src="../img/boy.jpg" alt="" class="w-full h-full rounded-full object-top object-cover">
-                    </figure>
-                    <hgroup class="md:skew-x-12 flex flex-col gap-10 mt-12 md:gap-2">
-                        <h1 class="capitalize text-lg font-semibold max-sm:pl-20 text-center dark:text-white">john salmon</h1>
-                        <p class="md:pl-52 dark:text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet quis consectetur eaque soluta
-                            <span class="max-sm:hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit.</span> <span
-                                class="md:hidden">...</span></p>
-                    </hgroup>
+
+                <div class="bg-gray-100 p-6 rounded-xl shadow hover:shadow-lg transition-all duration-300 animate-fadeInUp delay-100"
+                    data-aos="fade-up" data-aos-duration="900">
+                    <h3 class="text-xl font-bold mb-2"><i class="fa-solid fa-people-group"></i> Community</h3>
+                    <p class="text-gray-600">Together, we support each other’s journeys and build lasting bonds.</p>
                 </div>
-            </article>
-            <a href="#" class="custom-button bg-red-700 text-white">read more stories</a>
+
+                <div class="bg-gray-100 p-6 rounded-xl shadow hover:shadow-lg transition-all duration-300 animate-fadeInUp delay-200"
+                    data-aos="fade-up" data-aos-duration="900">
+                    <h3 class="text-xl font-bold mb-2"><i class="fa-solid fa-ribbon"></i> Discipline</h3>
+                    <p class="text-gray-600">Excellence on and off the stage comes from commitment and hard work.</p>
+                </div>
+
+                <div class="bg-gray-100 p-6 rounded-xl shadow hover:shadow-lg transition-all duration-300 animate-fadeInUp delay-300"
+                    data-aos="fade-up" data-aos-duration="900">
+                    <h3 class="text-xl font-bold mb-2"><i class="fa-solid fa-lightbulb"></i> Innovation</h3>
+                    <p class="text-gray-600">We’re not afraid to break boundaries and redefine theatre for a new
+                        generation.</p>
+                </div>
+
+                <div class="bg-gray-100 p-6 rounded-xl shadow hover:shadow-lg transition-all duration-300 animate-fadeInUp delay-400"
+                    data-aos="fade-up" data-aos-duration="900">
+                    <h3 class="text-xl font-bold mb-2"><i class="fa-solid fa-scale-balanced"></i> Integrity</h3>
+                    <p class="text-gray-600">We stand by our values and keep it real — on stage and in life.</p>
+                </div>
+
+                <div class="bg-gray-100 p-6 rounded-xl shadow hover:shadow-lg transition-all duration-300 animate-fadeInUp delay-500"
+                    data-aos="fade-up" data-aos-duration="900">
+                    <h3 class="text-xl font-bold mb-2"><i class="fa-solid fa-hand-fist"></i> Leadership</h3>
+                    <p class="text-gray-600">We empower students to lead change and take initiative.</p>
+                </div>
+
+            </div>
         </section>
+
+        <!-- Meet the Team Section -->
+        <section class="bg-gray-50 py-20 px-6 " data-aos="fade-up" data-aos-duration="900">
+            <div class="max-w-6xl mx-auto text-center mb-14">
+                <h2 class="text-3xl font-bold text-amber-600 mb-4">Meet the Team</h2>
+                <p class="text-gray-600 text-lg">Say hello to the passionate creatives behind ATAS - LASU!</p>
+            </div>
+
+            <article class="flex flex-col gap-10">
+            <!-- First Card Centered -->
+            <div class="flex justify-center mb-32">
+                <div
+                    class="team-card bg-white rounded-2xl shadow-md p-6 text-center transition-transform hover:-translate-y-2 hover:shadow-xl animate-fadeInUp w-4/5 sm:w-1/2 md:w-1/3 mx-auto">
+                    <img src="../IMG/human-one.jpg" alt="Team Member"
+                        class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-amber-200">
+                    <h3 class="text-xl font-semibold text-amber-600">Adebanjo David Olusegun</h3>
+                    <p class="text-sm text-gray-500">President</p>
+                    <p class="mt-3 text-gray-600 text-sm">Commanding the spotlight with poise and purpose—our lead act
+                        with a golden heart.</p>
+                </div>
+            </div>
+
+            <!-- Grid for Remaining 9 Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- CARD 2 -->
+                <div class="team-card bg-white rounded-2xl shadow-md p-6 text-center transition-transform hover:-translate-y-2 hover:shadow-xl animate-fadeInUp delay-100 w-4/5 sm:w-auto mx-auto sm:mx-0">
+                    <img src="../IMG/human-six.jpg" alt="Team Member"
+                        class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-amber-200">
+                    <h3 class="text-xl font-semibold text-amber-600">Dabiri Pelumi Isaac</h3>
+                    <p class="text-sm text-gray-500">Vice President</p>
+                    <p class="mt-3 text-gray-600 text-sm">Creative force and hype engine—always stepping up, always shining through.</p>
+                </div>
+                <!-- CARD 3 -->
+                <div class="team-card bg-white rounded-2xl shadow-md p-6 text-center transition-transform hover:-translate-y-2 hover:shadow-xl animate-fadeInUp delay-100 w-4/5 sm:w-auto mx-auto sm:mx-0">
+                    <img src="../IMG/human-two.jpg" alt="Team Member"
+                        class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-amber-200">
+                    <h3 class="text-xl font-semibold text-amber-600">Ajenifuja Precious Oluwadamilola</h3>
+                    <p class="text-sm text-gray-500">General Secretary</p>
+                    <p class="mt-3 text-gray-600 text-sm">Every word, a well-timed cue—organizing our drama with quiet
+                        brilliance. </p>
+                </div>
+                <!-- CARD 4 -->
+                <div class="team-card bg-white rounded-2xl shadow-md p-6 text-center transition-transform hover:-translate-y-2 hover:shadow-xl animate-fadeInUp delay-100 w-4/5 sm:w-auto mx-auto sm:mx-0">
+                    <img src="../IMG/human-three.jpg" alt="Team Member"
+                        class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-amber-200">
+                    <h3 class="text-xl font-semibold text-amber-600">Ajala Michael</h3>
+                    <p class="text-sm text-gray-500">Social Director</p>
+                    <p class="mt-3 text-gray-600 text-sm">The life of every scene—energizing the stage and the squad
+                        with flair and finesse.</p>
+                </div>
+                <!-- CARD 5 -->
+                <div class="team-card bg-white rounded-2xl shadow-md p-6 text-center transition-transform hover:-translate-y-2 hover:shadow-xl animate-fadeInUp delay-100 w-4/5 sm:w-auto mx-auto sm:mx-0">
+                    <img src="../IMG/human-five.jpg" alt="Team Member"
+                        class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-amber-200">
+                    <h3 class="text-xl font-semibold text-amber-600">Raji Oyinniolami Olanrewaju.</h3>
+                    <p class="text-sm text-gray-500">P.R.O</p>
+                    <p class="mt-3 text-gray-600 text-sm">Voice of the stage, bridge to the world—broadcasting our art
+                        with power and pride.</p>
+                </div>
+                <!-- CARD 6 -->
+                <div class="team-card bg-white rounded-2xl shadow-md p-6 text-center transition-transform hover:-translate-y-2 hover:shadow-xl animate-fadeInUp delay-100 w-4/5 sm:w-auto mx-auto sm:mx-0">
+                    <img src="../IMG/human-four.jpg" alt="Team Member"
+                        class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-amber-200">
+                    <h3 class="text-xl font-semibold text-amber-600">Matthew Miracle</h3>
+                    <p class="text-sm text-gray-500">Assistant P.R.O</p>
+                    <p class="mt-3 text-gray-600 text-sm">Echoes the spotlight with grace—supportive, strategic, and
+                        always in sync.</p>
+                </div>
+                <!-- CARD 7 -->
+                <div class="team-card bg-white rounded-2xl shadow-md p-6 text-center transition-transform hover:-translate-y-2 hover:shadow-xl animate-fadeInUp delay-100 w-4/5 sm:w-auto mx-auto sm:mx-0">
+                    <img src="../IMG/human-seven.jpg" alt="Team Member"
+                        class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-amber-200">
+                    <h3 class="text-xl font-semibold text-amber-600">Olusesi Abidemi Enitan</h3>
+                    <p class="text-sm text-gray-500">Financial Secretary</p>
+                    <p class="mt-3 text-gray-600 text-sm">Handles the purse with precision—diligent, dependable, and the silent strength behind every success. </p>
+                </div>
+                <!-- CARD 8 -->
+                <div class="team-card bg-white rounded-2xl shadow-md p-6 text-center transition-transform hover:-translate-y-2 hover:shadow-xl animate-fadeInUp delay-100 w-4/5 sm:w-auto mx-auto sm:mx-0">
+                    <img src="../IMG/human-eight.jpg" alt="Team Member"
+                        class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-amber-200">
+                    <h3 class="text-xl font-semibold text-amber-600">Oshiguwa Malik Michael  </h3>
+                    <p class="text-sm text-gray-500">Assistance General Secretary</p>
+                    <p class="mt-3 text-gray-600 text-sm">The rhythm behind the records—organized, attentive, and ever-ready to keep the heart of the team beating strong. </p>
+                </div>
+                <!-- CARD 9 -->
+                <div class="team-card bg-white rounded-2xl shadow-md p-6 text-center transition-transform hover:-translate-y-2 hover:shadow-xl animate-fadeInUp delay-100 w-4/5 sm:w-auto mx-auto sm:mx-0">
+                    <img src="../IMG/human-nine.jpg" alt="Team Member"
+                        class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-amber-200">
+                    <h3 class="text-xl font-semibold text-amber-600">Omotola Mubaraq Olamiji </h3>
+                    <p class="text-sm text-gray-500">Assistance Social Director</p>
+                    <p class="mt-3 text-gray-600 text-sm">The spark in every celebration—vibrant, creative, and always one step ahead in turning moments into memories.</p>
+                </div>
+                <!-- CARD 10 -->
+                <div class="team-card bg-white rounded-2xl shadow-md p-6 text-center transition-transform hover:-translate-y-2 hover:shadow-xl animate-fadeInUp delay-100 w-4/5 sm:w-auto mx-auto sm:mx-0">
+                    <img src="../IMG/human-ten.jpg" alt="Team Member"
+                        class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-amber-200">
+                    <h3 class="text-xl font-semibold text-amber-600">Ereku Victoria
+                    </h3>
+                    <p class="text-sm text-gray-500">Welfare Director</p>
+                    <p class="mt-3 text-gray-600 text-sm">The heart of our community—compassionate, dependable, and always putting others first with unwavering care.</p>
+                </div>
+            </div>
+        </article>
+        </section>
+
+        <section class="bg-black text-white py-20 px-6" data-aos="fade-up" data-aos-duration="900">
+            <div class="max-w-4xl mx-auto text-center flex flex-col items-center gap-6">
+                <h2 class="text-3xl sm:text-4xl font-bold leading-tight">Become a Part of Something Bigger</h2>
+                <p class="text-lg sm:text-xl text-blue-100 max-w-2xl">
+                    Whether you're into acting, directing, stage design, or just want to vibe with fellow creatives —
+                    ATAS is
+                    your home.
+                </p>
+                <a href="./membership.html"
+                    class="bg-amber-500 hover:bg-amber-600 transition-all duration-300 text-white px-8 py-3 text-lg rounded-full shadow-lg hover:shadow-xl hover:scale-105">
+                    Join the Community &rarr;
+                </a>
+            </div>
+            </article>
+        </section>
+
+
+        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+            class="fixed bottom-6 right-6 bg-black text-white p-3 rounded-full shadow-lg  z-20">
+            ↑
+        </button>
     </main>
 
-    <hr class="text-gray-400 mx-10 my-3">
-
-    <!-- footer -->
-    <footer class="max-sm:hidden">
-        <section class="w-full h-fit p-10 flex justify-between">
-            <div class="w-2/5 flex flex-col gap-2 pl-16">
-                <figure class="flex gap-2 items-center">
-                    <img src="../img/coderoll.png" alt="" width="40">
-                    <h1 class="font-bold text-3xl dark:text-white">Code<span class="text-red-700">Roll</span></h1>
-                </figure>
-                <article class="text-2xl font-medium text-gray-500 ">
-                    <p>At CodeRoll <br> we Code, we Learn, <br> we Roll...</p>
-                </article>
+    <footer class="bg-black text-white pt-10 pb-5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            <div class="flex flex-col gap-3">
+                <img src="../IMG/ATAS-LOGO-one.png" alt="ATAS Logo" class="w-16">
+                <h2 class="text-xl md:text-2xl font-bold text-amber-600">A.T.A.S - L.A.S.U</h2>
+                <p class="text-sm md:text-base text-gray-300">
+                    Association of Theatre Art Students, LASU — Building dreams on stage, in class, and beyond.
+                </p>
             </div>
-            <div class="w-1/5">
-                <ul class="capitalize text-xl text-gray-500 flex flex-col gap-2">
-                    <p class="uppercase text-black font-semibold text-2xl dark:text-white">company</p>
-                    <li><a href="#">about</a></li>
-                    <li><a href="#">careers</a></li>
-                    <li><a href="#">blog</a></li>
-                    <li><a href="#">press</a></li>
+            <div>
+                <h3 class="text-lg md:text-xl font-semibold mb-3 text-teal">Quick Links</h3>
+                <ul class="flex flex-col gap-2 text-sm md:text-base text-gray-200">
+                    <li><a href="../index.html" class="hover:text-amber-600">Home</a></li>
+                    <li><a href="#" class="hover:text-amber-600">About Us</a></li>
+                    <li><a href="./membership.html" class="hover:text-amber-600">Join Us</a></li>
                 </ul>
             </div>
-            <div class="w-1/5">
-                <ul class="capitalize text-xl text-gray-500 flex flex-col gap-2">
-                    <p class="uppercase text-black font-semibold text-2xl dark:text-white">information</p>
-                    <li><a href="#">help/FAQs</a></li>
-                    <li><a href="#">tutorials</a></li>
-                    <li><a href="#">pricing</a></li>
-                    <li><a href="#">features</a></li>
+            <div>
+                <h3 class="text-lg md:text-xl font-semibold mb-3 text-teal">Contact Us</h3>
+                <ul class="text-sm md:text-base text-gray-200 space-y-2">
+                    <li>Email: atas@lasu.edu.ng</li>
+                    <li>Phone: +234 704 235 7125</li>
+                    <li>Location: LASU, Ojo Campus</li>
                 </ul>
             </div>
-            <div class="w-1/5">
-                <ul class="capitalize text-xl text-gray-500 flex flex-col gap-2">
-                    <p class="uppercase text-black font-semibold text-2xl dark:text-white">more</p>
-                    <li><a href="#">courses</a></li>
-                    <li><a href="#">registration</a></li>
-                    <li><a href="#">account</a></li>
-                    <li><a href="#">credits</a></li>
-                </ul>
-            </div>
-        </section>
-        <hr class="text-gray-400 mx-10 my-2">
-        <div class="flex px-10 py-2 justify-between text-lg text-gray-500">
-            <p>&copy; 2025 CodeRoll - Code | Learn | Roll</p>
-            <p>Terms & Condition | Privacy Policy</p>
         </div>
-    </footer>
-    <footer class="md:hidden">
-        <div class=" text-lg text-gray-500 px-10 py-2 text-center flex flex-col gap-2">
-            <p>&copy; 2025 CodeRoll - Code | Learn | Roll</p>
-            <p>Terms & Condition | Privacy Policy</p>
+        <div class="border-t border-gray-700 mt-10 pt-5 text-center text-gray-300 text-sm px-4 sm:px-6">
+            © <span id="year"></span> A.T.A.S - LASU. All Rights Reserved.
         </div>
     </footer>
 
-    <!-- Sign Up -->
-    <div class="signup" id="signup">
-        <div class="signup__content relative">
-            <a href="#" class="text-3xl text-gray-500 absolute left-5 top-3 hover:text-black">&times;</a>
-            <article class="md:w-1/2 flex flex-col gap-7 items-center p-7 md:p-14">
-                <header>
-                    <h1 class="text-5xl text-red-700 uppercase font-bold">sign up</h1>
-                </header>
-                <form action="#" class="flex flex-col items-center gap-5">
-                    <input type="text" placeholder="FULL NAME" class="w-full p-3 bg-white shadow-md outline-none"
-                        required>
-                    <input type="email" placeholder="EMAIL ADDRESS" class="w-full p-3 bg-white shadow-md outline-none"
-                        required>
-                    <input type="password" placeholder="PASSWORD" class="w-full p-3 bg-white shadow-md outline-none"
-                        required>
-                    <span>
-                        <input type="checkbox" class="cursor-pointer" required> By registering, you have agreed with our
-                        <a href="#" class="hover:text-blue-600 underline">T&C and Privacy Policy</a>
-                    </span>
-                    <button type="submit"
-                        class="w-40 py-2 content-center uppercase bg-red-700 text-white text-xl font-semibold rounded-lg shadow-md hover:-translate-y-0.5 cursor-pointer">sign
-                        up</button>
-                </form>
-                <figure>
-                    <p class="text-center">Already have an account, <br><a href="#signin"
-                            class="underline hover:text-blue-600">Sign In Here</a></p>
-                </figure>
-            </article>
-        </div>
-    </div>
 
-    <!-- Sign In -->
-    <div class="signup" id="signin">
-        <div class="signup__content relative">
-            <a href="#" class="text-3xl text-gray-500 absolute left-5 top-3 hover:text-black">&times;</a>
-            <article class="flex flex-col gap-10 p-7 max-sm:mt-10 md:w-1/2 md:p-14">
-                <header>
-                    <h1 class="text-5xl text-red-700 uppercase font-bold text-center">sign in</h1>
-                </header>
-                <form action="#" class="flex flex-col items-center gap-7">
-                    <input type="text" class="w-full bg-white p-3 shadow-md outline-none" placeholder="Username Or Email Address"
-                        required>
-                    <input type="password" class="w-full bg-white p-3 shadow-md outline-none" placeholder="PASSWORD" required>
-                    <button type="submit"
-                        class="w-40 py-2 content-center uppercase bg-red-700 text-white text-xl font-semibold rounded-lg shadow-md hover:-translate-y-0.5 cursor-pointer">sign
-                        in</button>
-                </form>
-                <figure>
-                    <p class="text-center">Don't have an account, <br><a href="#signup"
-                            class="underline hover:text-blue-600">Sign Up
-                            Here</a></p>
-                </figure>
-            </article>
-        </div>
-    </div>
+    <script>
+        window.addEventListener("load", () => {
+            const preloader = document.getElementById("preloader");
+            preloader.classList.add("fade-out");
+
+            // After animation ends, remove it from the DOM
+            setTimeout(() => {
+                preloader.style.display = "none";
+            }, 500);
+        });
+    </script>
+    <script>
+        const carousel = document.getElementById('teamCarousel');
+        const cards = document.querySelectorAll('.team-card');
+        const dotContainer = document.getElementById('dotIndicators');
+
+        let activeIndex = 0;
+
+        // Create dots
+        cards.forEach((_, i) => {
+            const dot = document.createElement('button');
+            dot.className = 'w-3 h-3 rounded-full bg-blue-300';
+            dot.setAttribute('data-index', i);
+            dotContainer.appendChild(dot);
+        });
+
+        const updateDots = () => {
+            const scrollLeft = carousel.scrollLeft;
+            const cardWidth = cards[0].offsetWidth + 24; // 24 is approx. margin
+            activeIndex = Math.round(scrollLeft / cardWidth);
+
+            dotContainer.querySelectorAll('button').forEach((dot, i) => {
+                dot.className = i === activeIndex
+                    ? 'w-3 h-3 rounded-full bg-blue-700'
+                    : 'w-3 h-3 rounded-full bg-blue-300';
+            });
+        };
+
+        carousel.addEventListener('scroll', () => {
+            updateDots();
+        });
+
+        // Optional: dot click to scroll to that slide
+        dotContainer.addEventListener('click', (e) => {
+            if (e.target.tagName === 'BUTTON') {
+                const i = parseInt(e.target.getAttribute('data-index'));
+                carousel.scrollTo({
+                    left: cards[0].offsetWidth * i,
+                    behavior: 'smooth'
+                });
+            }
+        });
+
+        // Initial update
+        updateDots();
+    </script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000, // Animation duration in ms
+            offset: 120, // How far before trigger point
+            once: true // Animate only once
+        });
+    </script>
+    <script>
+        // Set the current year in the footer
+        document.getElementById("year").textContent = new Date().getFullYear(); 
+    </script>
+
+
+    <script type="module">
+        import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
+
+        const supabaseUrl = 'https://pcjucmcurlsjldcibljk.supabase.co';
+        const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBjanVjbWN1cmxzamxkY2libGprIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc2MjcwMDIsImV4cCI6MjA2MzIwMzAwMn0._5otFqSK9Bvk4coSNhsKbZZrlxXn3FBThFa3R6VkhM4';
+        const supabase = createClient(supabaseUrl, supabaseKey);
+
+        // Make supabase accessible globally (optional)
+        window.supabase = supabase;
+    </script>
 </body>
 
 </html>

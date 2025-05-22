@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- title -->
+    <title>A.T.A.S - Blogs | Events</title>
+
+    <!-- styling-link -->
+    <link rel="stylesheet" href="../src/output.css">
+
+    <!-- boxicon-link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+
+    <!-- favicon-link -->
+    <link rel="shortcut icon" href="../IMG/LASU-LOGO.png" type="image/x-icon">
+    <style>
+        .tab-button {
+            transition: all 0.3s ease;
+        }
+
+        .active-tab {
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+
+<body class="flex flex-col gap-2 md:gap-5">
+    <!-- Preloader -->
+    <div id="preloader" class="fixed inset-0 z-50 bg-white flex items-center justify-center">
+        <div class="flex flex-col items-center gap-3">
+            <img src="../IMG/ATAS-LOGO-one.png" alt="Loading Logo" class="w-20 h-20 animate-bounce">
+            <p class="text-amber-600 font-semibold text-lg animate-pulse">Loading ATAS world...</p>
+        </div>
+    </div>
+
+    <nav class="fixed">
+        <div class="nav-content">
+            <div class="flex items-center gap-3">
+                <img src="../IMG/ATAS-LOGO-one.png" alt="" width="70px" height="50px">
+                <h1><a href="#">A.T.A.S</a></h1>
+            </div>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./about.html">About Us</a></li>
+                <li><a href="./resources.html">Resources</a></li>
+                <li><a href="./membership.html">Join Us</a></li>
+                <li class="home"><a href="#">Events</a></li>
+                <li><a href="./chat.html">Chat</a></li>
+            </ul>
+            <a href="#navSidebar" class="nav-menu-icon">&#9776;</a>
+        </div>
+
+        <div class="nav-sidebar" id="navSidebar">
+            <a href="#" class="close-btn">&times;</a>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./about.html">About Us</a></li>
+                <li><a href="./resources.html">Resources</a></li>
+                <li class="home"><a href="#">Events</a></li>
+                <li><a href="./membership.html">Join Us</a></li>
+                <li><a href="./chat.html">Chat</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="bg-white pt-24 pb-16 px-4 md:px-12">
+        <div class="max-w-7xl mx-auto flex flex-col gap-10">
+            <!-- Header -->
+            <div class="text-center mb-32">
+                <h2 class="text-3xl font-bold text-amber-600">Upcoming Events</h2>
+                <p class="text-gray-600 mt-2">Stay updated with our latest and upcoming events!</p>
+            </div>
+
+            <!-- Content Wrapper -->
+            <div class="flex flex-col lg:flex-row gap-10 ">
+                <!-- Main Content: Events -->
+                <div class="flex-1 space-y-8" id="eventsContainer">
+                    <!-- Event cards will be injected here -->
+                </div>
+
+                <!-- Optional Sidebar: Could be used later for filters or highlights -->
+                <aside class="w-full lg:w-1/3 space-y-6">
+                    <div class="bg-gray-100 p-6 rounded-xl">
+                        <h3 class="text-lg font-bold text-amber-600 mb-4">Highlight</h3>
+                        <p class="text-gray-700 text-sm">Check out the most liked or popular events!</p>
+                        <!-- Maybe include trending events later -->
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <footer class="bg-black text-white pt-10 pb-5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            <div class="flex flex-col gap-3">
+                <img src="../IMG/ATAS-LOGO-one.png" alt="ATAS Logo" class="w-16">
+                <h2 class="text-xl md:text-2xl font-bold text-amber-600">A.T.A.S - L.A.S.U</h2>
+                <p class="text-sm md:text-base text-gray-300">
+                    Association of Theatre Art Students, LASU — Building dreams on stage, in class, and beyond.
+                </p>
+            </div>
+            <div>
+                <h3 class="text-lg md:text-xl font-semibold mb-3 text-teal">Quick Links</h3>
+                <ul class="flex flex-col gap-2 text-sm md:text-base text-gray-200">
+                    <li><a href="../index.html" class="hover:text-amber-600">Home</a></li>
+                    <li><a href="./about.html" class="hover:text-amber-600">About Us</a></li>
+                    <li><a href="./resources.html" class="hover:text-amber-600">Resources</a></li>
+                    <li><a href="./membership.html" class="hover:text-amber-600">Join Us</a></li>
+                    <li><a href="#" class="hover:text-amber-600">Events</a></li>
+                    <li><a href="./chat.html" class="hover:text-amber-600">Chat</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-lg md:text-xl font-semibold mb-3 text-teal">Contact Us</h3>
+                <ul class="text-sm md:text-base text-gray-200 space-y-2">
+                    <li>Email: atas@lasu.edu.ng</li>
+                    <li>Phone: +234 704 235 7125</li>
+                    <li>Location: LASU, Ojo Campus</li>
+                </ul>
+            </div>
+        </div>
+        <div class="border-t border-gray-700 mt-10 pt-5 text-center text-gray-300 text-sm px-4 sm:px-6">
+            © <span id="year"></span> A.T.A.S - LASU. All Rights Reserved.
+        </div>
+    </footer>
+
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000, // Animation duration in ms
+            offset: 120, // How far before trigger point
+            once: true // Animate only once
+        });
+    </script>
+    <script>
+        // Set the current year in the footer
+        document.getElementById("year").textContent = new Date().getFullYear(); 
+    </script>
+    <script>
+        window.addEventListener("load", () => {
+            const preloader = document.getElementById("preloader");
+            preloader.classList.add("fade-out");
+
+            // After animation ends, remove it from the DOM
+            setTimeout(() => {
+                preloader.style.display = "none";
+            }, 500);
+        });
+    </script>
+
+    <script src="../js/blog.js" type="module"></script>
+
+    <script type="module">
+        import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
+
+        const supabaseUrl = 'https://pcjucmcurlsjldcibljk.supabase.co';
+        const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBjanVjbWN1cmxzamxkY2libGprIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc2MjcwMDIsImV4cCI6MjA2MzIwMzAwMn0._5otFqSK9Bvk4coSNhsKbZZrlxXn3FBThFa3R6VkhM4';
+        const supabase = createClient(supabaseUrl, supabaseKey);
+
+        // Make supabase accessible globally (optional)
+        window.supabase = supabase;
+    </script>
+</body>
+
+</html>

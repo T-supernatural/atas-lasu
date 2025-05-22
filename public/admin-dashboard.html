@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- title -->
+    <title>A.T.A.S - Admin</title>
+
+    <!-- styling-link -->
+    <link rel="stylesheet" href="../src/output.css">
+
+    <!-- boxicon-link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+
+    <!-- favicon-link -->
+    <link rel="shortcut icon" href="../IMG/LASU-LOGO.png" type="image/x-icon">
+
+</head>
+<!-- dashboard.html -->
+
+<body class="bg-gray-100 min-h-screen font-sans">
+    <!-- Preloader -->
+    <div id="preloader" class="fixed inset-0 z-50 bg-white flex items-center justify-center">
+        <div class="flex flex-col items-center gap-3">
+            <img src="../IMG/ATAS-LOGO-one.png" alt="Loading Logo" class="w-20 h-20 animate-bounce">
+            <p class="text-amber-600 font-semibold text-lg animate-pulse">Loading ATAS world...</p>
+        </div>
+    </div>
+
+    <nav class="fixed">
+        <div class="nav-content">
+            <div class="flex items-center gap-3">
+                <img src="../IMG/ATAS-LOGO-one.png" alt="" width="70px" height="50px">
+                <h1><a href="#">A.T.A.S</a></h1>
+            </div>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./about.html">About Us</a></li>
+                <li><a href="./resources.html">Resources</a></li>
+                <li><a href="./membership.html">Join Us</a></li>
+                <li><a href="./blog.html">Events</a></li>
+                <li><a href="./chat.html">Chat</a></li>
+            </ul>
+            <a href="#navSidebar" class="nav-menu-icon">&#9776;</a>
+        </div>
+    
+        <div class="nav-sidebar" id="navSidebar">
+            <a href="#" class="close-btn">&times;</a>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./about.html">About Us</a></li>
+                <li><a href="./resources.html">Resources</a></li>
+                <li><a href="./blog.html">Events</a></li>
+                <li><a href="./membership.html">Join Us</a></li>
+                <li><a href="./chat.html">Chat</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="bg-gray-100 pt-40 pb-20">
+        <div class="max-w-6xl mx-auto px-4 py-6 flex flex-col gap-8">
+            <!-- Welcome Header -->
+            <div class="flex items-center justify-between mb-9">
+                <h1 class="text-3xl font-bold text-black">Admin Dashboard</h1>
+                <button id="logoutBtn"
+                    class="bg-red-500 cursor-pointer text-white px-4 py-2 rounded hover:bg-red-600 transition">
+                    Logout
+                </button>
+            </div>
+    
+            <!-- Quick Action Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-7 mb-10">
+                <button id="uploadResourceBtn"
+                    class="bg-white h-24 text-center content-center rounded-lg shadow hover:bg-blue-100 transition cursor-pointer">
+                    <h2 class="text-xl font-semibold text-amber-600">📤 Upload Resource</h2>
+                    <p class="text-sm text-gray-600">Add past questions and files</p>
+                </button>
+    
+                <button id="uploadEventBtn"
+                    class="bg-white h-24 text-center content-center rounded-lg shadow hover:bg-green-100 transition cursor-pointer">
+                    <h2 class="text-xl font-semibold text-amber-600">📅 Post Event</h2>
+                    <p class="text-sm text-gray-600">Schedule performances or shows</p>
+                </button>
+
+                <div class="bg-white p-6 rounded-lg shadow cursor-pointer">
+                    <hgroup class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4 ">Community Chat</h3>
+                        <a href="./chat.html" class="px-3 py-2 bg-amber-600 text-white rounded">View</a>
+                        <ul id="chatList" class="divide-y divide-gray-200 text-sm text-gray-700"></ul>
+                </div>
+            </div>
+    
+            <!-- Admin Data Tables -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-7">
+                <div class="bg-white p-6 rounded-lg shadow cursor-pointer">
+                    <hgroup class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4 ">📆 Recent Resources </h3>
+                        <a href="./resources.html" class="px-3 py-2 bg-amber-600 text-white rounded">View</a>
+                        </hgroup>
+                    <ul id="resourceList" class="divide-y divide-gray-200 text-sm text-gray-700"></ul>
+                </div>
+    
+                <div class="bg-white p-6 rounded-lg shadow cursor-pointer">
+                    <hgroup class="flex items-center justify-between mb-4">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4 ">📆 Upcoming Events</h3>
+                    <a href="./blog.html" class="px-3 py-2 bg-amber-600 text-white rounded">View</a>
+                </hgroup>
+                    <ul id="eventList" class="divide-y divide-gray-200 text-sm text-gray-700"></ul>
+                </div>
+    
+                
+            </div>
+        </div>
+    
+        <!-- Unified Admin Modal -->
+        <div id="adminModal" class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center hidden z-50">
+            <div class="bg-white rounded-lg p-6 w-[90vw] max-w-md relative">
+                <!-- Close Button -->
+                <button id="modalCloseBtn"
+                    class="absolute top-3 right-3 text-gray-600 hover:text-gray-900 text-2xl font-bold"
+                    aria-label="Close modal">
+                    &times;
+                </button>
+    
+                <!-- Modal Title -->
+                <h2 id="modalTitle" class="text-xl font-bold mb-4 text-center"></h2>
+    
+                <form id="modalForm" class="space-y-4">
+                    <!-- Title -->
+                    <div>
+                        <label for="title" class="block font-medium mb-1">Title <span class="text-red-600">*</span></label>
+                        <input type="text" id="title" name="title" placeholder="Enter title" required
+                            class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+                    </div>
+                
+                    <!-- Picture Input (for Blog & Event) -->
+                    <div id="pictureInputWrapper" class="hidden">
+                        <label for="pictureInput" class="block font-medium mb-1">Upload Picture <span
+                                class="text-red-600">*</span></label>
+                        <input type="file" id="pictureInput" name="picture" accept="image/*" class="w-full" />
+                    </div>
+                
+                    <!-- File Input (Resource only) -->
+                    <div id="fileInputWrapper" class="hidden">
+                        <label for="file" class="block font-medium mb-1">Select File <span class="text-red-600">*</span></label>
+                        <input type="file" id="file" name="file" accept=".pdf,.doc,.docx,.png,.jpg,.jpeg" class="w-full" />
+                    </div>
+                
+                    <!-- Description Input -->
+                    <div id="descriptionInputWrapper">
+                        <label for="descriptionInput" class="block font-medium mb-1">Description <span
+                                class="text-red-600">*</span></label>
+                        <textarea id="descriptionInput" name="description" rows="3" placeholder="Enter description" required
+                            class="w-full border border-gray-300 rounded px-3 py-2 resize-none focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+                    </div>
+                
+                    <!-- Date Input (Event only) -->
+                    <div id="dateInputWrapper" class="hidden">
+                        <label for="dateInput" class="block font-medium mb-1">Event Date <span class="text-red-600">*</span></label>
+                        <input type="date" id="dateInput" name="date"
+                            class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+                    </div>
+                
+                    <!-- Tags Input (optional) -->
+                    <div id="tagsInputWrapper" class="hidden">
+                        <label for="tagsInput" class="block font-medium mb-1">Tags (comma separated)</label>
+                        <input type="text" id="tagsInput" name="tags" placeholder="e.g. drama, festival, theatre"
+                            class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+                    </div>
+                
+                    <!-- Submit Button -->
+                    <div class="text-center">
+                        <button id="modalSubmitBtn" type="submit"
+                            class="bg-amber-600 text-white px-6 py-2 rounded hover:bg-amber-700 transition">
+                            Submit
+                        </button>
+                    </div>
+                </form>
+                  
+                </form>
+            </div>
+        </div>
+    </main>
+      
+      
+
+
+    <footer class="bg-black text-white pt-10 pb-5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            <div class="flex flex-col gap-3">
+                <img src="../IMG/ATAS-LOGO-one.png" alt="ATAS Logo" class="w-16">
+                <h2 class="text-xl md:text-2xl font-bold text-amber-600">A.T.A.S - L.A.S.U</h2>
+                <p class="text-sm md:text-base text-gray-300">
+                    Association of Theatre Art Students, LASU — Building dreams on stage, in class, and beyond.
+                </p>
+            </div>
+            <div>
+                <h3 class="text-lg md:text-xl font-semibold mb-3 text-teal">Quick Links</h3>
+                <ul class="flex flex-col gap-2 text-sm md:text-base text-gray-200">
+                    <li><a href="../index.html" class="hover:text-amber-600">Home</a></li>
+                    <li><a href="./about.html" class="hover:text-amber-600">About Us</a></li>
+                    <li><a href="./resources.html" class="hover:text-amber-600">Resources</a></li>
+                    <li><a href="./membership.html" class="hover:text-amber-600">Join Us</a></li>
+                    <li><a href="#" class="hover:text-amber-600">Events</a></li>
+                    <li><a href="./chat.html" class="hover:text-amber-600">Chat</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-lg md:text-xl font-semibold mb-3 text-teal">Contact Us</h3>
+                <ul class="text-sm md:text-base text-gray-200 space-y-2">
+                    <li>Email: atas@lasu.edu.ng</li>
+                    <li>Phone: +234 704 235 7125</li>
+                    <li>Location: LASU, Ojo Campus</li>
+                </ul>
+            </div>
+        </div>
+        <div class="border-t border-gray-700 mt-10 pt-5 text-center text-gray-300 text-sm px-4 sm:px-6">
+            © <span id="year"></span> A.T.A.S - LASU. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener("load", () => {
+            const preloader = document.getElementById("preloader");
+            preloader.classList.add("fade-out");
+
+            // After animation ends, remove it from the DOM
+            setTimeout(() => {
+                preloader.style.display = "none";
+            }, 500);
+        });
+    </script>
+
+    <script>
+        // Set the current year in the footer
+        document.getElementById("year").textContent = new Date().getFullYear(); 
+    </script>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000, // Animation duration in ms
+            offset: 120, // How far before trigger point
+            once: true // Animate only once
+        });
+    </script>
+
+    <!-- <script>
+        function openModal(id) {
+            document.getElementById(id).classList.remove('hidden');
+        }
+        function closeModal(id) {
+            document.getElementById(id).classList.add('hidden');
+        }
+    </script> -->
+
+    <script type="module" src="../js/admin-dashboard.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- title -->
+    <title>A.T.A.S - Dashboad</title>
+
+    <!-- styling-link -->
+    <link rel="stylesheet" href="../src/output.css">
+
+    <!-- boxicon-link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+
+    <!-- favicon-link -->
+    <link rel="shortcut icon" href="../IMG/LASU-LOGO.png" type="image/x-icon">
+
+</head>
+<!-- dashboard.html -->
+
+<body class="bg-gray-100 min-h-screen font-sans">
+    <!-- Preloader -->
+    <div id="preloader" class="fixed inset-0 z-50 bg-white flex items-center justify-center">
+        <div class="flex flex-col items-center gap-3">
+            <img src="../IMG/ATAS-LOGO-one.png" alt="Loading Logo" class="w-20 h-20 animate-bounce">
+            <p class="text-amber-600 font-semibold text-lg animate-pulse">Loading ATAS world...</p>
+        </div>
+    </div>
+
+    <nav class="fixed">
+        <div class="nav-content">
+            <div class="flex items-center gap-3">
+                <img src="../IMG/ATAS-LOGO-one.png" alt="" width="70px" height="50px">
+                <h1><a href="#">A.T.A.S</a></h1>
+            </div>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./about.html">About Us</a></li>
+                <li><a href="./resources.html">Resources</a></li>
+                <li><a href="./membership.html">Join Us</a></li>
+                <li><a href="./blog.html">Events</a></li>
+                <li><a href="./chat.html">Chat</a></li>
+            </ul>
+            <a href="#navSidebar" class="nav-menu-icon">&#9776;</a>
+        </div>
+    
+        <div class="nav-sidebar" id="navSidebar">
+            <a href="#" class="close-btn">&times;</a>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./about.html">About Us</a></li>
+                <li><a href="./resources.html">Resources</a></li>
+                <li><a href="./blog.html">Events</a></li>
+                <li><a href="./membership.html">Join Us</a></li>
+                <li><a href="./chat.html">Chat</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="bg-gray-100 pt-40 pb-20">
+        <div class="max-w-5xl mx-auto px-4 py-6 flex flex-col gap-7">
+            <!-- Greeting -->
+            <h2 id="welcomeMessage" class="text-2xl font-semibold text-black"></h2>
+
+
+            <!-- Quick Access Tiles -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+                <a href="./resources.html" class="bg-white p-7 rounded-xl shadow hover:bg-blue-50 transition" data-aos="fade-up" data-aos-duration="900">
+                    <h2 class="text-xl font-semibold text-amber-600">📂 Resources</h2>
+                    <p class="text-sm text-gray-600">Download past questions and documents</p>
+                </a>
+
+                <a href="./blog.html" class="bg-white p-7 rounded-xl shadow hover:bg-yellow-50 transition" data-aos="fade-up" data-aos-duration="900">
+                    <h2 class="text-xl font-semibold text-amber-600">📰 Blogs & Events</h2>
+                    <p class="text-sm text-gray-600">See latest posts and event news</p>
+                </a>
+
+                <a href="./chat.html" class="bg-white p-7 rounded-xl shadow hover:bg-green-50 transition" data-aos="fade-up" data-aos-duration="900">
+                    <h2 class="text-xl font-semibold text-amber-600">💬 Group Chat</h2>
+                    <p class="text-sm text-gray-600">Connect with other members</p>
+                </a>
+            </div>
+
+           
+
+            
+
+            <!-- Logout -->
+            <div class="text-center">
+                <button id="logoutBtn" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition cursor-pointer">
+                    Logout
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-black text-white pt-10 pb-5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            <div class="flex flex-col gap-3">
+                <img src="../IMG/ATAS-LOGO-one.png" alt="ATAS Logo" class="w-16">
+                <h2 class="text-xl md:text-2xl font-bold text-amber-600">A.T.A.S - L.A.S.U</h2>
+                <p class="text-sm md:text-base text-gray-300">
+                    Association of Theatre Art Students, LASU — Building dreams on stage, in class, and beyond.
+                </p>
+            </div>
+            <div>
+                <h3 class="text-lg md:text-xl font-semibold mb-3 text-teal">Quick Links</h3>
+                <ul class="flex flex-col gap-2 text-sm md:text-base text-gray-200">
+                    <li><a href="../index.html" class="hover:text-amber-600">Home</a></li>
+                    <li><a href="./about.html" class="hover:text-amber-600">About Us</a></li>
+                    <li><a href="./resources.html" class="hover:text-amber-600">Resources</a></li>
+                    <li><a href="./membership.html" class="hover:text-amber-600">Join Us</a></li>
+                    <li><a href="#" class="hover:text-amber-600">Events</a></li>
+                    <li><a href="./chat.html" class="hover:text-amber-600">Chat</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-lg md:text-xl font-semibold mb-3 text-teal">Contact Us</h3>
+                <ul class="text-sm md:text-base text-gray-200 space-y-2">
+                    <li>Email: atas@lasu.edu.ng</li>
+                    <li>Phone: +234 704 235 7125</li>
+                    <li>Location: LASU, Ojo Campus</li>
+                </ul>
+            </div>
+        </div>
+        <div class="border-t border-gray-700 mt-10 pt-5 text-center text-gray-300 text-sm px-4 sm:px-6">
+            © <span id="year"></span> A.T.A.S - LASU. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener("load", () => {
+            const preloader = document.getElementById("preloader");
+            preloader.classList.add("fade-out");
+
+            // After animation ends, remove it from the DOM
+            setTimeout(() => {
+                preloader.style.display = "none";
+            }, 500);
+        });
+    </script>
+
+    <script>
+        // Set the current year in the footer
+        document.getElementById("year").textContent = new Date().getFullYear(); 
+    </script>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+                duration: 1000, // Animation duration in ms
+                offset: 120, // How far before trigger point
+                once: true // Animate only once
+            });
+    </script>
+
+    <script type="module" src="../js/user-dashboard.js"></script>
+</body>
+
+</html>
