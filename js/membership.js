@@ -16,12 +16,6 @@ document
     const password = document.getElementById("password").value;
     const name = document.getElementById("name")?.value || ""; // If you have a name field
 
-    // Password length check
-    if (password.length < 6) {
-      alert("Password must be at least 6 characters long.");
-      return;
-    }
-
     const baseUrl = window.location.origin;
 
     // Try to sign up
@@ -39,11 +33,13 @@ document
       if (
         error.message &&
         (error.message.toLowerCase().includes("user already registered") ||
-         error.message.toLowerCase().includes("already registered") ||
-         error.message.toLowerCase().includes("user already exists") ||
-         error.message.toLowerCase().includes("duplicate key"))
+          error.message.toLowerCase().includes("already registered") ||
+          error.message.toLowerCase().includes("user already exists") ||
+          error.message.toLowerCase().includes("duplicate key"))
       ) {
-        alert("This email has already been registered. Please log in or use a different email.");
+        alert(
+          "This email has already been registered. Please log in or use a different email."
+        );
         return;
       } else {
         alert("Signup failed: " + error.message);
@@ -107,7 +103,6 @@ document.getElementById("loginForm").addEventListener("submit", async (e) => {
     } else {
       window.location.href = "/public/user-dashboard.html";
     }
-
   } catch (err) {
     console.error("Unexpected login error:", err);
     alert("Something went wrong. Please try again.");

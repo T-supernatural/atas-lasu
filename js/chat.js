@@ -106,33 +106,47 @@ chatBox.addEventListener("click", async (e) => {
   }
 });
 
-// Typing indicator (show actual user's name)
+// --- Typing indicator using Supabase Realtime broadcast ---
+
+// Broadcast typing event to others via Supabase Realtime
+function broadcastTyping(name) {
+  supabase.channel('typing')
+    .send({
+      type: 'broadcast',
+      event: 'typing',
+      payload: { name }
+    });
+}
+
+// Typing indicator (show actual user's name and broadcast to others)
 chatInput.addEventListener("input", () => {
   if (!currentUser) return;
   const name = getDisplayName(currentUser);
-  localStorage.setItem("atas-chat-typing", name);
-  window.dispatchEvent(new Event("atas-chat-typing"));
+  broadcastTyping(name); // Broadcast to others
   typingIndicator.textContent = `🎭 ${name} is typing...`;
   typingIndicator.classList.remove("hidden");
   clearTimeout(window.typingTimeout);
   window.typingTimeout = setTimeout(() => {
     typingIndicator.classList.add("hidden");
-    localStorage.removeItem("atas-chat-typing");
   }, 1000);
 });
 
-// Listen for typing events from other tabs/users
-window.addEventListener("atas-chat-typing", () => {
-  const name = localStorage.getItem("atas-chat-typing");
-  if (name && name !== getDisplayName(currentUser)) {
-    typingIndicator.textContent = `🎭 ${name} is typing...`;
-    typingIndicator.classList.remove("hidden");
-    clearTimeout(window.typingTimeout);
-    window.typingTimeout = setTimeout(() => {
-      typingIndicator.classList.add("hidden");
-    }, 1000);
-  }
-});
+// Listen for typing events from other users via Supabase Realtime
+supabase.channel('typing')
+  .on('broadcast', { event: 'typing' }, (payload) => {
+    const name = payload.payload.name;
+    if (name !== getDisplayName(currentUser)) {
+      typingIndicator.textContent = `🎭 ${name} is typing...`;
+      typingIndicator.classList.remove("hidden");
+      clearTimeout(window.typingTimeout);
+      window.typingTimeout = setTimeout(() => {
+        typingIndicator.classList.add("hidden");
+      }, 1000);
+    }
+  })
+  .subscribe();
+
+// --- End typing indicator section ---
 
 // Realtime listeners
 function subscribeToRealtime() {
