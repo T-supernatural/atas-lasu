@@ -22,6 +22,8 @@ document
       return;
     }
 
+    const baseUrl = window.location.origin;
+
     // Try to sign up
     const { data, error } = await supabase.auth.signUp({
       email,
