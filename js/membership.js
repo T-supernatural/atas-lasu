@@ -27,7 +27,7 @@ document
       email,
       password,
       options: {
-        emailRedirectTo: "http://localhost:5502/public/user-dashboard.html",
+        emailRedirectTo: `${baseUrl}/public/user-dashboard.html`,
         data: { full_name: name },
       },
     });
