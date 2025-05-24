@@ -14,7 +14,7 @@ document
 
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
-    const name = document.getElementById("name")?.value || ""; // If you have a name field
+    const name = document.getElementById("name")?.value || "";
 
     const baseUrl = window.location.origin;
 
@@ -29,13 +29,12 @@ document
     });
 
     if (error) {
-      // Check if the error is because the user already exists
+      // Improved error check for duplicate email
+      const msg = error.message.toLowerCase();
       if (
-        error.message &&
-        (error.message.toLowerCase().includes("user already registered") ||
-          error.message.toLowerCase().includes("already registered") ||
-          error.message.toLowerCase().includes("user already exists") ||
-          error.message.toLowerCase().includes("duplicate key"))
+        msg.includes("already") ||
+        msg.includes("unique") ||
+        msg.includes("exists")
       ) {
         alert(
           "This email has already been registered. Please log in or use a different email."
@@ -47,19 +46,31 @@ document
       }
     }
 
-    // Store extra profile info (like name, role)
+    // Only insert profile if user is new
     if (data.user) {
-      await supabase.from("profiles").insert([
-        {
-          id: data.user.id,
-          email,
-          full_name: name,
-          role: "user",
-        },
-      ]);
+      // Check if profile already exists to avoid duplicate error
+      const { data: existingProfile } = await supabase
+        .from("profiles")
+        .select("id")
+        .eq("id", data.user.id)
+        .single();
+
+      if (!existingProfile) {
+        await supabase.from("profiles").insert([
+          {
+            id: data.user.id,
+            email,
+            full_name: name,
+            role: "user",
+          },
+        ]);
+      }
     }
 
-    alert("Confirmation email sent! Please check your inbox.");
+    alert(
+      "Confirmation email sent! Please check your inbox and click the link to complete registration."
+    );
+    // No redirect here; redirect happens after email confirmation via emailRedirectTo
   });
 
 // Handle Login
