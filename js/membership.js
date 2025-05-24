@@ -1,9 +1,8 @@
-// membership.js
 import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm";
 
-const supabaseUrl = "https://wcavsnxueqamhujawmjt.supabase.co"; // Replace
+const supabaseUrl = "https://wcavsnxueqamhujawmjt.supabase.co";
 const supabaseKey =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndjYXZzbnh1ZXFhbWh1amF3bWp0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc3ODE2MzUsImV4cCI6MjA2MzM1NzYzNX0.0EGiIUFViE7af0hC1pw8nSH83zMIbXnEwioAyDJogf0"; // Replace
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndjYXZzbnh1ZXFhbWh1amF3bWp0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc3ODE2MzUsImV4cCI6MjA2MzM1NzYzNX0.0EGiIUFViE7af0hC1pw8nSH83zMIbXnEwioAyDJogf0";
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 // Handle Sign Up
@@ -12,10 +11,11 @@ document
   .addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    const email = document.getElementById("email").value;
+    const email = document.getElementById("email").value.trim();
     const password = document.getElementById("password").value;
     const name = document.getElementById("name")?.value || "";
 
+    // Use current domain for redirect
     const baseUrl = window.location.origin;
 
     // Try to sign up
@@ -29,12 +29,13 @@ document
     });
 
     if (error) {
-      // Improved error check for duplicate email
+      // Robust duplicate email check
       const msg = error.message.toLowerCase();
       if (
         msg.includes("already") ||
         msg.includes("unique") ||
-        msg.includes("exists")
+        msg.includes("exists") ||
+        msg.includes("registered")
       ) {
         alert(
           "This email has already been registered. Please log in or use a different email."
