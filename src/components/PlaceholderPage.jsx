@@ -1,0 +1,3 @@
+export function PlaceholderPage({ title, description }) {
+  return <section className="mx-auto flex min-h-[calc(100vh-73px)] max-w-7xl items-center px-5 py-16"><div className="max-w-2xl"><p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-amber-700">ATAS-LASU</p><h1 className="font-display text-4xl font-bold tracking-tight sm:text-6xl">{title}</h1><p className="mt-6 text-lg leading-8 text-stone-600">{description}</p><p className="mt-10 rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm text-amber-950">This route is intentionally scaffolded in Phase 1. Its final interface and functionality are built in its assigned migration phase.</p></div></section>;
+}

@@ -1,19 +1,28 @@
 {
-  "name": "new-tail-project",
+  "name": "atas-lasu",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "ATAS-LASU student association platform",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "dependencies": {
+    "@supabase/supabase-js": "^2.116.0",
     "@tailwindcss/cli": "^4.0.14",
     "animate.css": "^4.1.1",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "react-router-dom": "^7.18.3",
     "tailwindcss": "^4.0.14"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "@vitejs/plugin-react": "^6.1.1",
+    "vite": "^8.3.0"
   }
 }
