@@ -24,7 +24,7 @@ export function MembershipPage() {
       if (profileError) { setError("Your account was created, but we could not create the member profile. Please contact ATAS support."); setLoading(false); return; }
     }
     if (data.user && !data.session) { setMessage("Check your inbox to confirm your email, then return here to sign in."); }
-    else if (data.user) { setMessage("Your account is ready. You can now enter the member area."); }
+    else if (data.user) { navigate("/dashboard", { replace: true }); }
     setLoading(false);
   }
 

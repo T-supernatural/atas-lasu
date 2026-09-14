@@ -1,10 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap");
 @import "tailwindcss";
 
 @theme {
-  --font-display: Georgia, "Times New Roman", serif;
-  --font-sans: Inter, ui-sans-serif, system-ui, sans-serif;
+  --color-stage-obsidian: #0e0f12;
+  --color-stage-charcoal: #14161b;
+  --color-stage-surface: #1c1f26;
+  --color-surface-container: #1f1f23;
+  --color-surface-container-high: #292a2d;
+  --color-surface-container-highest: #343538;
+  --color-chalk-cream: #f3f0e8;
+  --color-stone-muted: #9e9a91;
+  --color-theatre-amber: #e59b2c;
+  --color-amber-dim: #8c5614;
+  --color-line-subtle: #272a34;
+  --font-display: "Newsreader", Georgia, serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
 }
 
-:root { font-family: var(--font-sans); color: #1c1917; background: #fafaf9; }
-body { margin: 0; min-width: 320px; }
+:root { font-family: var(--font-sans); color: var(--color-chalk-cream); background: var(--color-stage-obsidian); }
+body { margin: 0; min-width: 320px; background: var(--color-stage-obsidian); }
 * { box-sizing: border-box; }
+::selection { background: var(--color-theatre-amber); color: var(--color-stage-obsidian); }
+@keyframes reveal-up { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+@layer components {
+  .reveal-up { animation: reveal-up .65s cubic-bezier(.2,.7,.2,1) both; }
+  .stage-card { background: var(--color-stage-charcoal); border: 1px solid var(--color-line-subtle); border-radius: .375rem; transition: border-color .25s ease, box-shadow .25s ease; }
+  .stage-card:hover { border-color: color-mix(in srgb, var(--color-theatre-amber) 45%, var(--color-line-subtle)); box-shadow: 0 0 24px rgb(229 155 44 / .12); }
+  .stage-link { display: inline-flex; align-items: center; gap: .5rem; color: var(--color-theatre-amber); font-size: .75rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; transition: gap .2s ease, color .2s ease; }
+  .stage-link:hover { gap: .8rem; color: var(--color-chalk-cream); }
+}
+
+/* Legacy pages inherit stronger tonal separation without changing behavior. */
+.bg-stone-200, .bg-stone-100 { background-color: var(--color-stage-charcoal) !important; }
+.bg-white, .bg-stone-50 { background-color: var(--color-stage-surface) !important; }
+.text-stone-600, .text-stone-500 { color: var(--color-chalk-cream) !important; }
+.text-stone-900, .text-stone-800, .text-stone-700 { color: var(--color-chalk-cream) !important; }
+.border-stone-200, .border-stone-300 { border-color: var(--color-line-subtle) !important; }
+
+/* Keep the dramatic treatment while letting more of the theatre imagery show. */
+img[alt="Theatre stage under warm lights"] { opacity: .68 !important; }
+img[alt="Theatre stage under warm lights"] + div { opacity: .68; }
+img[alt="Audience under theatre lights"] { opacity: .42 !important; }
+img[alt="Audience under theatre lights"] + div { opacity: .68; }
