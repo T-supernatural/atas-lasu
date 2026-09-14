@@ -50,6 +50,21 @@ The React application scaffold will be added in Phase 1. Once it is present:
 
 Never commit `.env.local` or a Supabase service-role key. Browser code must use only the anon/public key; RLS is the security boundary.
 
+## Netlify deployment
+
+This repository includes `netlify.toml`. Netlify must build the Vite app rather than publish the repository root:
+
+- Build command: `npm run build`
+- Publish directory: `dist`
+- Node version: 22
+
+In **Netlify → Site configuration → Environment variables**, add:
+
+- `VITE_SUPABASE_URL` = `https://wcavsnxueqamhujawmjt.supabase.co`
+- `VITE_SUPABASE_ANON_KEY` = the project anon/public key
+
+Then trigger a new deploy. `VITE_` variables are embedded by Vite at build time; `.env.local` is intentionally ignored by Git and is not available on Netlify.
+
 ## Repository hygiene
 
 `node_modules` is intentionally ignored and has been removed from Git tracking. Run `npm install` locally whenever dependencies need to be restored.

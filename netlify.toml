@@ -1,0 +1,12 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# React Router needs this fallback when a visitor opens a route directly.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

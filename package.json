@@ -11,6 +11,9 @@
   "author": "",
   "license": "ISC",
   "type": "module",
+  "engines": {
+    "node": ">=20.19.0"
+  },
   "dependencies": {
     "@supabase/supabase-js": "^2.116.0",
     "@tailwindcss/cli": "^4.0.14",
