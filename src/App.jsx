@@ -1,11 +1,12 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import { AppShell } from "./components/AppShell";
 import { PlaceholderPage } from "./components/PlaceholderPage";
+import { AboutPage } from "./pages/AboutPage";
+import { HomePage } from "./pages/HomePage";
+import { MembershipPage } from "./pages/MembershipPage";
+import { AuthCallbackPage } from "./pages/AuthCallbackPage";
 
 const routes = [
-  { path: "/", title: "Home", description: "Public home and association introduction." },
-  { path: "/about", title: "About ATAS-LASU", description: "Association story, mission, values, and leadership." },
-  { path: "/membership", title: "Membership", description: "Member sign-up, email confirmation, and sign-in." },
   { path: "/dashboard", title: "Member Dashboard", description: "The member starting point for resources, events, and chat." },
   { path: "/resources", title: "Resources", description: "Member learning resources and downloads." },
   { path: "/events", title: "Events", description: "Upcoming association events and member likes." },
@@ -14,5 +15,5 @@ const routes = [
 ];
 
 export default function App() {
-  return <Routes><Route element={<AppShell />}>{routes.map((route) => <Route key={route.path} path={route.path} element={<PlaceholderPage {...route} />} />)}</Route><Route path="*" element={<Navigate to="/" replace />} /></Routes>;
+  return <Routes><Route element={<AppShell />}><Route path="/" element={<HomePage />} /><Route path="/about" element={<AboutPage />} /><Route path="/membership" element={<MembershipPage />} />{routes.map((route) => <Route key={route.path} path={route.path} element={<PlaceholderPage {...route} />} />)}</Route><Route path="/auth/callback" element={<AuthCallbackPage />} /><Route path="*" element={<Navigate to="/" replace />} /></Routes>;
 }
