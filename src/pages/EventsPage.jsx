@@ -26,13 +26,11 @@ export function EventsPage() {
 
   async function toggleLike(eventId) {
     if (!user) { setError("Sign in to like an event."); return; }
-    const isLiked = likedIds.has(eventId);
-    const { error: likeError } = isLiked ? await supabase.from("event_likes").delete().eq("event_id", eventId).eq("user_id", user.id) : await supabase.from("event_likes").insert({ event_id: eventId, user_id: user.id });
-    if (likeError) { setError("We could not update your like. Please try again."); return; }
-    const { error: countError } = await supabase.rpc(isLiked ? "decrement_event_likes" : "increment_event_likes", { event_id_input: eventId });
-    if (countError) { setError("Your like was saved, but the event count could not be updated. Please refresh the page."); return; }
-    setLikedIds((current) => { const next = new Set(current); isLiked ? next.delete(eventId) : next.add(eventId); return next; });
-    setEvents((current) => current.map((event) => event.id === eventId ? { ...event, likes: Math.max(0, (event.likes ?? 0) + (isLiked ? -1 : 1)) } : event));
+    setError("");
+    const { data, error: likeError } = await supabase.rpc("toggle_event_like", { event_id_input: eventId }).single();
+    if (likeError || !data) { setError("We could not update your like. Please try again."); return; }
+    setLikedIds((current) => { const next = new Set(current); data.liked ? next.add(eventId) : next.delete(eventId); return next; });
+    setEvents((current) => current.map((event) => event.id === eventId ? { ...event, likes: data.likes } : event));
   }
   return <><PageIntro eyebrow="ATAS-LASU calendar" title="Find the next moment to show up." text="Discover upcoming association events and let the community know what you are looking forward to." /><section className="mx-auto max-w-7xl px-5 py-12">{error && <Message tone="error">{error} {!user && <Link className="font-semibold underline" to="/membership">Sign in</Link>}</Message>}{status === "loading" && <Loading label="Loading events…" />}{status === "error" && <Message tone="error">{error}</Message>}{status === "ready" && <div className="grid gap-7 lg:grid-cols-2">{events.length ? events.map((event) => <EventCard key={event.id} event={event} liked={likedIds.has(event.id)} onLike={() => toggleLike(event.id)} />) : <Message>No events have been posted yet. Check back soon.</Message>}</div>}</section></>;
 }

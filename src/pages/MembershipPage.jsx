@@ -20,7 +20,7 @@ export function MembershipPage() {
     const { data, error: authError } = await supabase.auth.signUp({ email: signUp.email.trim(), password: signUp.password, options: { emailRedirectTo: `${window.location.origin}/auth/callback`, data: { full_name: signUp.name.trim() } } });
     if (authError) { setError(authError.message); setLoading(false); return; }
     if (data.user) {
-      const { error: profileError } = await supabase.from("profiles").upsert({ id: data.user.id, email: signUp.email.trim(), full_name: signUp.name.trim(), role: "user" }, { onConflict: "id", ignoreDuplicates: true });
+      const { error: profileError } = await supabase.from("profiles").upsert({ id: data.user.id, full_name: signUp.name.trim(), role: "user" }, { onConflict: "id", ignoreDuplicates: true });
       if (profileError) { setError("Your account was created, but we could not create the member profile. Please contact ATAS support."); setLoading(false); return; }
     }
     if (data.user && !data.session) { setMessage("Check your inbox to confirm your email, then return here to sign in."); }
